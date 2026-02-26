@@ -1,40 +1,98 @@
 # Đo huyết áp
 
-> Tính năng lõi của LC247 — theo dõi huyết áp hàng ngày với 2 phương pháp đo.
+> Đo huyết áp mọi lúc mọi nơi — bằng máy đo hoặc chỉ cần camera điện thoại. Sau mỗi lần đo, bác sĩ gửi lời khuyên riêng cho bạn.
 
-## Mô tả
+## Đo huyết áp giúp bạn
 
-Người dùng đo huyết áp ngay trên app và nhận kết quả tức thì: chỉ số SYS (tâm thu) / DIA (tâm trương) / Pulse (nhịp tim), phân loại mức độ bằng thanh màu, và lời khuyên từ bác sĩ.
+- Biết chỉ số huyết áp chính xác (SYS/DIA/nhịp tim)
+- Nhận diễn giải dễ hiểu — "Bình thường" hay "Cần chú ý"
+- Nhận lời khuyên từ bác sĩ thực sau mỗi lần đo
+- Tích +10 Xu mỗi lần đo để đổi quà
 
-## Hai phương pháp đo
+---
 
-### 1. Đo bằng máy
-- **Nhập tay**: Đo bằng máy đo HA tại nhà → nhập số vào app
-- **Chụp ảnh**: Chụp màn hình máy đo → app tự nhận dạng số
+## Bước 1: Chọn cách đo
 
-### 2. Đo bằng quét khuôn mặt (Binah AI)
-- Dùng camera trước điện thoại, quét khuôn mặt ~40 giây
-- Công nghệ Binah AI phân tích tín hiệu quang học từ da để ước tính HA
-- **Không cần máy đo** — đo mọi lúc mọi nơi
-- Hiện tại: 84.2% success rate (iOS: 87.3%, Android: 77.6%)
+![Chọn phương pháp đo](../screenshot/do-chon-phuong-phap.png)
 
-## Kết quả đo
+LC247 có **2 cách đo**:
 
-Sau mỗi lần đo, app hiển thị:
-- **Chỉ số**: SYS/DIA/Pulse (ví dụ: 135/85/72)
-- **Thanh trạng thái màu**: Xanh lá (bình thường) → Vàng (tiền tăng HA) → Đỏ (tăng HA)
-- **Phân loại**: Bình thường / Tiền tăng HA / Tăng HA độ I / Tăng HA độ II / Cơn tăng HA
-- **Lời khuyên bác sĩ**: BS Long Châu xem chỉ số và gửi lời dặn cụ thể (ví dụ: "Giảm bớt lượng muối trong bữa ăn hàng ngày")
+| Cách đo | Phù hợp khi |
+|---------|------------|
+| **Đo bằng máy** | Bạn có máy đo huyết áp tại nhà |
+| **Đo bằng quét khuôn mặt** | Không có máy đo — chỉ cần camera điện thoại |
 
-## Cách sử dụng
+---
 
-1. Mở LC247 → Chọn **"Đo huyết áp"**
-2. Chọn phương pháp: **Đo bằng máy** hoặc **Quét khuôn mặt**
-3. Nếu quét khuôn mặt: giữ điện thoại cố định, nhìn vào camera, chờ ~40 giây
-4. Xem kết quả + lời khuyên bác sĩ
-5. Nhận **+10 Xu** thưởng
+## Cách 1: Đo bằng máy
 
-## Lưu ý
-- Nên đo cùng thời điểm mỗi ngày để so sánh chính xác
-- HA buổi tối thường cao hơn buổi sáng 5-10 điểm — đây là bình thường
-- Quét khuôn mặt phù hợp cho sàng lọc; đo máy chính xác hơn cho theo dõi điều trị
+### Đo xong → Nhập kết quả
+
+![Hướng dẫn đo bằng máy](../screenshot/do-may-huong-dan.png)
+
+Lấy máy đo và tiến hành đo huyết áp. Khi đo xong, bấm **"TÔI ĐÃ ĐO XONG"**.
+
+### Chụp ảnh hoặc tự nhập
+
+![Chụp ảnh kết quả](../screenshot/do-may-chup-anh.png)
+
+Hai lựa chọn:
+- **Chụp ảnh màn hình máy đo** — app tự nhận diện chỉ số
+- **Tự nhập chỉ số** — nhập SYS/DIA/nhịp tim bằng tay
+
+---
+
+## Cách 2: Đo bằng quét khuôn mặt
+
+### Chuẩn bị
+
+![Chuẩn bị face scan](../screenshot/do-face-scan-chuan-bi.png)
+
+- Mở camera trước
+- Nghe hướng dẫn bằng giọng nói
+- Quá trình đo chỉ mất **khoảng 40 giây**
+
+### Đang đo — giữ yên
+
+![Face scan đang đo](../screenshot/do-face-scan-dang-do.png)
+
+- Vòng tròn đếm ngược 40 giây
+- App nhắc: **"Giữ yên nhé Chị, đang đo rồi ạ"**
+- Nhịp tim hiện dần trên màn hình
+
+### Nhận kết quả
+
+![Kết quả face scan](../screenshot/do-face-scan-ket-qua.png)
+
+Kết quả hiển thị rõ ràng:
+- **SYS** (Tâm thu): 123 mmHg
+- **DIA** (Tâm trương): 79 mmHg
+- **PULSE** (Nhịp tim): 82 nhịp/phút
+
+Bấm **"Lưu"** để ghi vào nhật ký sức khoẻ.
+
+> 💡 Kết quả quét khuôn mặt mang tính tham khảo. Để chính xác nhất, nên dùng máy đo huyết áp.
+
+---
+
+## Bước 2: Nhận kết quả + Lời khuyên bác sĩ
+
+![Kết quả và lời khuyên bác sĩ](../screenshot/ket-qua-bac-si.png)
+
+Sau khi lưu kết quả, bạn nhận được:
+
+- **Trạng thái rõ ràng** — "Huyết áp bình thường" với chữ lớn
+- **Theo dõi tuần** — Các ngày trong tuần bạn đã đo (T2–CN)
+- **Lời dặn từ bác sĩ** — "Duy trì thói quen đo chỉ số nhé! Bạn đang làm rất tốt"
+- **Lời khuyên sức khoẻ** — Bác sĩ Hoàng Anh gửi khuyến nghị cá nhân
+
+---
+
+## Kết quả bạn nhận được
+
+Mỗi lần đo huyết áp, bạn nhận:
+- ✅ Chỉ số SYS/DIA/nhịp tim chính xác
+- ✅ Diễn giải dễ hiểu — bình thường, cần chú ý, hay nguy hiểm
+- ✅ Lời khuyên từ bác sĩ thực (không phải chatbot)
+- ✅ +10 Xu tích luỹ đổi quà
+- ✅ Dữ liệu tự động lưu vào báo cáo sức khoẻ

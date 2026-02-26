@@ -1,24 +1,57 @@
-# Dashboard & Trang chủ
+# Trang chủ
 
-> Trang chủ LC247 — nơi người dùng thấy tổng quan sức khoẻ và nhận gợi ý hàng ngày.
+> Nơi bắt đầu mỗi ngày — LC247 chào bạn, nhắc bạn đo, và cho bạn thấy tình trạng sức khoẻ ngay lập tức.
 
-## Mô tả
+## Trang chủ giúp bạn
 
-Trang chủ LC247 hiển thị thông tin sức khoẻ cá nhân ngay khi mở app: lời chào cá nhân, chỉ số HA gần nhất, nhắc nhở, và nội dung kiến thức.
+- Biết ngay hôm nay đã đo huyết áp chưa
+- Xem nhanh chỉ số sức khoẻ mới nhất
+- Chuyển nhanh giữa các thành viên gia đình
+- Đọc kiến thức sức khoẻ phù hợp
 
-## Các thành phần
+---
 
-| Thành phần | Mô tả |
-|-----------|-------|
-| **Lời chào cá nhân** | "Chào Chị C Mai Anh" — hiển thị tên người dùng |
-| **Chỉ số HA gần nhất** | SYS/DIA + trạng thái màu + thời gian đo gần nhất |
-| **Nhắc nhở đo** | Hiện khi lâu không đo: "Bạn chưa đo huyết áp hôm nay" |
-| **Kiến thức sức khoẻ** | Grid bài viết, phân loại 4 tag: Tự chăm sóc / Ăn đúng / Sống khoẻ / Cần biết |
-| **Banner khuyến mãi** | "Tích điểm nhận quà" + các chương trình Xu |
+## Mở app — LC247 chào bạn
 
-## Cách sử dụng
+![Trang chủ LC247](../screenshot/home-chao-don.png)
 
-- Mở app Long Châu → vào LC247 → **Trang chủ** hiện mặc định
-- Xem chỉ số HA gần nhất — tap vào để xem chi tiết
-- Scroll xuống xem kiến thức sức khoẻ — tap bài viết để đọc
-- Tap nút **"Đo ngay"** để bắt đầu đo huyết áp
+Khi mở LC247, bạn sẽ thấy:
+
+- **Lời chào cá nhân** — "Chào Chị C Mai Anh, chúc Chị một ngày tốt lành"
+- **Thành viên gia đình** — Chuyển nhanh giữa hồ sơ của bạn và người thân
+- **Nhắc nhở đo** — "Buổi sáng là thời điểm tốt để Chị đo Huyết Áp đó"
+- **Nút ĐO NGAY** — Bấm để đo huyết áp ngay, tích +10 Xu mỗi lần đo
+
+---
+
+## Xem nhanh sức khoẻ
+
+![Tổng quan sức khoẻ](../screenshot/home-suc-khoe.png)
+
+Cuộn xuống, bạn thấy ngay:
+
+- **Chỉ số huyết áp mới nhất** — 116/72 mmHg, 73 nhịp/phút
+- **Thanh màu trạng thái** — Xanh = bình thường, Vàng = cần chú ý, Đỏ = cần gặp BS
+- **Lời khuyên từ bác sĩ** — "Giữ vững thể lực và tinh thần nhờ lối sống khoa học"
+- **Kiến thức sức khoẻ** — Bài viết theo 4 chủ đề: Tự chăm sóc, Ăn đúng, Sống khoẻ, Cần biết
+
+---
+
+## Cài đặt nhắc nhở
+
+![Cài đặt nhắc nhở](../screenshot/nhac-nho-cai-dat.png)
+
+Bạn có thể cài lịch nhắc nhở để không quên đo:
+
+- **Đo huyết áp** — Nhắc hàng ngày vào giờ bạn chọn
+- **Đo đường huyết** — Cho người theo dõi đường huyết
+- Bật/tắt bằng 1 nút
+
+---
+
+## Kết quả bạn nhận được
+
+Mỗi lần mở app, bạn biết ngay:
+- ✅ Hôm nay đã đo chưa → nếu chưa, bấm 1 nút để đo
+- ✅ Sức khoẻ đang ổn hay cần chú ý → nhìn màu thanh trạng thái
+- ✅ Bác sĩ nói gì → đọc lời khuyên ngay trên trang chủ

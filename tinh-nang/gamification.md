@@ -1,29 +1,50 @@
-# Xu & Gamification
+# Xu & Phần thưởng
 
-> Tích điểm mỗi lần đo huyết áp — duy trì thói quen đo đều đặn.
+> Đo huyết áp mỗi ngày, tích Xu đổi quà — biến thói quen sức khoẻ thành niềm vui.
 
-## Mô tả
+## Xu & Phần thưởng giúp bạn
 
-LC247 khuyến khích người dùng duy trì thói quen đo huyết áp thường xuyên bằng hệ thống tích điểm (Xu) và phần thưởng.
+- Có động lực đo huyết áp đều đặn mỗi ngày
+- Tích luỹ Xu để đổi quà tại hệ thống Long Châu
+- Hoàn thành thử thách → nhận thêm phần thưởng
 
-## Cách hoạt động
+---
 
-### Tích Xu
-- Mỗi lần đo huyết áp thành công → **+10 Xu**
-- Popup chúc mừng sau mỗi lần đo, hiển thị số Xu nhận được
-- Xu tích luỹ và hiển thị trong tài khoản
+## Đo xong → Nhận Xu
 
-### Dùng Xu
-- Xu tích được có thể đổi quà tại hệ thống Long Châu
-- Liên kết với chương trình khách hàng thân thiết
+![Chúc mừng +10 Xu](../screenshot/xu-chuc-mung.png)
 
-## Mục đích
+Mỗi lần đo huyết áp thành công:
 
-Gamification trong LC247 không chỉ là "vui" — mà giải quyết vấn đề thực tế: **92.6% người dùng** hiện tại đo rất ít hoặc chưa bao giờ đo. Phần thưởng tạo động lực ban đầu để hình thành thói quen đo HA đều đặn.
+- Popup **"Chúc mừng!"** với confetti 🎉
+- Nhận **+10 Xu** — hiện rõ trên màn hình
+- Theo dõi streak: "Ngày 3 - Duy trì mỗi ngày"
+- Bấm **"Nhận quà"** để tiếp tục
 
-## Cách sử dụng
+---
 
-1. Đo huyết áp (nhập tay, chụp máy đo, hoặc face scan)
-2. Sau khi ghi kết quả → tự động nhận **+10 Xu**
-3. Popup hiển thị chúc mừng + số Xu
-4. Xem tổng Xu trong trang tài khoản
+## Thử thách 7 ngày
+
+![Thử thách 7 ngày](../screenshot/xu-thu-thach-7-ngay.png)
+
+Đo huyết áp **đủ 7 ngày liên tiếp** để nhận thưởng lớn:
+
+- Mỗi ngày đo = 1 ô xanh ✅
+- Hoàn thành 7 ngày → **nhận thêm lượt rút thưởng**
+- Có nhiều thử thách: "Duy Trì Mỗi Ngày", "Làm Quen - Nhận Điểm"...
+
+---
+
+## Dùng Xu làm gì?
+
+- Đổi quà tại hệ thống **1.700+ Nhà Thuốc Long Châu**
+- Tham gia rút thưởng khi hoàn thành thử thách
+- Xu tích luỹ trong tài khoản — dùng khi bạn muốn
+
+---
+
+## Kết quả bạn nhận được
+
+- ✅ Đo huyết áp trở thành thói quen vui → không còn quên hay ngại
+- ✅ Tích Xu mỗi ngày → đổi quà thực tế
+- ✅ Thử thách tạo động lực → duy trì streak dài ngày

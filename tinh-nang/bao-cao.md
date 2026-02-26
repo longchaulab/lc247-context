@@ -1,30 +1,84 @@
 # Báo cáo sức khoẻ
 
-> Theo dõi lịch sử đo, xu hướng chỉ số, và lịch sử tư vấn bác sĩ.
+> Theo dõi xu hướng huyết áp theo thời gian — nhật ký đo, lịch sức khoẻ, và báo cáo cá nhân hoá hàng tuần.
 
-## Mô tả
+## Báo cáo giúp bạn
 
-Báo cáo giúp người dùng nhìn lại lịch sử sức khoẻ theo thời gian — biết mình đo đều chưa, chỉ số có ổn định không, và bác sĩ đã dặn gì.
+- Thấy xu hướng huyết áp theo ngày, tuần, tháng
+- Biết khi nào chỉ số bất thường cần chú ý
+- Xem lại lịch sử tư vấn bác sĩ
+- Nhận báo cáo cá nhân hoá mỗi tuần
 
-## Ba loại báo cáo
+---
 
-### 1. Nhật ký đo
-- **Lịch theo tháng**: mỗi ngày đánh dấu icon trạng thái (xanh/vàng/đỏ)
-- **Chế độ xem**: Tổng quan (lịch) và Chi tiết (danh sách từng lần đo)
-- Xem SYS/DIA/Pulse của mỗi lần đo + phân loại
+## Tổng quan sức khoẻ
 
-### 2. Nhật ký tư vấn
-- Lịch sử các cuộc tư vấn với bác sĩ LC247
-- Lọc theo thời gian và mục đích tư vấn
-- Xem lại lời dặn của BS
+![Báo cáo tổng quan](../screenshot/bao-cao-tong-quan.png)
 
-### 3. Thể trạng (BMI)
-- Chiều cao, cân nặng, chỉ số BMI
-- Thanh trạng thái: Gầy / Bình thường / Thừa cân / Béo phì
-- Cập nhật khi đo lại cân nặng
+Mở tab **Báo cáo**, bạn thấy:
 
-## Cách sử dụng
+- **Huyết áp tuần này** — Chỉ số trung bình và trạng thái
+- **Thể trạng (BMI)** — Chiều cao, cân nặng, chỉ số BMI với thanh đánh giá (Nhẹ cân / Cân đối / Thừa cân / Béo phì)
+- 2 tab: **Nhật ký đo** và **Nhật ký tư vấn**
 
-1. Vào tab **"Báo cáo"** trên thanh menu
-2. Chọn loại: **Nhật ký đo** / **Nhật ký tư vấn** / **Thể trạng**
-3. Dùng lịch để xem theo tháng, tap ngày cụ thể để xem chi tiết
+---
+
+## Nhật ký đo — Lịch sức khoẻ
+
+![Nhật ký lịch](../screenshot/bao-cao-lich.png)
+
+Lịch tháng hiển thị trực quan:
+
+- 💚 **Xanh** — Huyết áp bình thường
+- 💛 **Vàng** — Nguy cơ, cần theo dõi
+- ❤️ **Đỏ** — Bất ổn, nên liên hệ bác sĩ
+- Nhìn 1 cái biết ngay tháng này sức khoẻ thế nào
+
+Bên dưới lịch là **lời dặn dò từ bác sĩ** — cập nhật theo tình trạng thực tế.
+
+---
+
+## Nhật ký đo — Chi tiết từng lần
+
+![Chi tiết lần đo](../screenshot/bao-cao-chi-tiet.png)
+
+Chuyển sang tab **Chi tiết**, bạn xem được:
+
+- Danh sách **từng lần đo** theo ngày
+- Mỗi lần ghi: SYS/DIA, nhịp tim, thời gian, trạng thái
+- Ví dụ: 09/02 lúc 20:50 — **Tiền tăng huyết áp** (139/80) → cần chú ý
+- Ví dụ: 23/02 lúc 08:55 — **Huyết áp bình thường** (115/81) → ổn
+
+---
+
+## Nhật ký tư vấn
+
+![Nhật ký tư vấn](../screenshot/bao-cao-tu-van.png)
+
+Xem lại lịch sử **tư vấn với bác sĩ**:
+
+- Mỗi lần tư vấn được lưu lại đầy đủ
+- Bác sĩ gửi dặn dò sau tư vấn → bạn xem lại bất cứ lúc nào
+- Chưa có tư vấn? Bấm **"Gọi tư vấn ngay"**
+
+---
+
+## Báo cáo sức khoẻ hàng tuần
+
+![Hồ sơ cá nhân](../screenshot/ho-so-ca-nhan.png)
+
+Mỗi tuần, LC247 gửi cho bạn **báo cáo sức khoẻ cá nhân hoá**:
+
+- **Tóm tắt tuần** — Bạn đã đo bao nhiêu lần, chỉ số trung bình
+- **Xu hướng** — Huyết áp ổn định, tăng, hay giảm so với tuần trước
+- **Gợi ý** — Lời khuyên phù hợp với tình trạng của bạn
+- Truy cập qua: **Hồ sơ cá nhân → Báo cáo sức khoẻ hàng tuần**
+
+---
+
+## Kết quả bạn nhận được
+
+- ✅ Nhìn 1 cái biết tháng này sức khoẻ ra sao (nhờ lịch màu)
+- ✅ Phát hiện sớm khi chỉ số bất thường
+- ✅ Xem lại lời dặn bác sĩ bất cứ lúc nào
+- ✅ Mỗi tuần nhận báo cáo riêng — biết mình tiến bộ hay cần cải thiện

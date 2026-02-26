@@ -1,35 +1,41 @@
 # Kiến thức sức khoẻ
 
-> Thư viện nội dung giáo dục sức khoẻ về huyết áp, dinh dưỡng, vận động, và đời sống.
+> Thư viện bài viết về huyết áp, dinh dưỡng, vận động và đời sống — giúp bạn hiểu bệnh và biết cách tự chăm sóc.
 
-## Mô tả
+## Kiến thức sức khoẻ giúp bạn
 
-Kiến thức sức khoẻ cung cấp bài viết và nội dung giáo dục từ hệ sinh thái Long Châu, giúp người dùng hiểu bệnh và biết cách tự chăm sóc.
+- Hiểu rõ hơn về tình trạng huyết áp của mình
+- Biết cách ăn uống, vận động phù hợp
+- Nhận biết dấu hiệu cần gặp bác sĩ
+- Đọc bài viết từ nguồn uy tín (đội ngũ y tế Long Châu)
 
-## Phân loại nội dung
+---
 
-Hiện tại có 4 chuyên mục:
+## Thư viện nội dung
 
-| Tag | Nội dung |
-|-----|---------|
-| **Tự chăm sóc** | Theo dõi sức khoẻ, đo HA đúng cách, khi nào cần gặp BS |
-| **Ăn đúng** | Dinh dưỡng cho người huyết áp cao, giảm muối, thực phẩm tốt |
-| **Sống khoẻ** | Vận động, ngủ, quản lý stress |
-| **Cần biết** | Kiến thức y khoa cơ bản, nhận biết dấu hiệu nguy hiểm |
+![Thư viện kiến thức](../screenshot/kien-thuc-thu-vien.png)
 
-## Hướng phát triển
+Mở tab **Kiến thức**, bạn thấy:
 
-Thư viện hiện tại là **tĩnh** — ai cũng nhận cùng nội dung. Kế hoạch phát triển:
+### 4 chủ đề
 
-- **4 format mới**: Tip Card (10-30s) · Article (2-5 phút) · Infographic (30-60s) · Video (30s-3 phút)
-- **6 chủ đề**: Huyết áp · Dinh dưỡng · Vận động · Thuốc · Đột quỵ · Tinh thần
-- **Cá nhân hoá**: Nội dung phù hợp vai trò (bệnh nhân / caregiver) + giai đoạn bệnh + thời điểm trong ngày
-- **"Đúng liều"**: 2-3 tips/ngày, 1-2 bài/tuần — không bombardment
+| Chủ đề | Nội dung |
+|--------|---------|
+| **Tự chăm sóc** | Đo huyết áp đúng cách, khi nào cần gặp bác sĩ |
+| **Ăn đúng** | Dinh dưỡng cho người huyết áp cao, giảm muối |
+| **Sống khoẻ** | Vận động, ngủ tốt, quản lý stress |
+| **Cần biết** | Nhận biết dấu hiệu nguy hiểm, kiến thức y khoa cơ bản |
 
-> Xem chi tiết: [Nội dung thông minh](../ke-hoach/noi-dung-thong-minh.md)
+### "Không nên bỏ lỡ"
 
-## Cách sử dụng
+Bài viết nổi bật được đề xuất — ví dụ:
+- "Thuốc điều trị đái tháo đường: nên uống trước hay sau ăn?"
+- "Cách chăm sóc bàn chân người tiểu đường"
 
-1. Từ **Trang chủ**, scroll xuống phần **Kiến thức sức khoẻ**
-2. Lọc theo tag: Tự chăm sóc / Ăn đúng / Sống khoẻ / Cần biết
-3. Tap bài viết để đọc chi tiết
+---
+
+## Kết quả bạn nhận được
+
+- ✅ Hiểu bệnh hơn → bớt lo lắng, biết cách hành động
+- ✅ Đọc bài phù hợp với mình → lọc theo chủ đề quan tâm
+- ✅ Nguồn uy tín → từ đội ngũ y tế Long Châu, không phải quảng cáo

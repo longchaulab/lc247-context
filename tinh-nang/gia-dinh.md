@@ -12,7 +12,7 @@
 
 ## Xem sức khoẻ người thân
 
-![Xem chỉ số gia đình](../screenshot/gia-dinh-xem-chi-so.png)
+<img src="../screenshot/gia-dinh-xem-chi-so.png" alt="Xem chỉ số gia đình" width="300">
 
 Từ trang chủ, chọn tên người thân → thấy ngay:
 
@@ -26,7 +26,7 @@ Từ trang chủ, chọn tên người thân → thấy ngay:
 
 ## Thêm người thân
 
-![Thêm người nhà](../screenshot/gia-dinh-them-nguoi.png)
+<img src="../screenshot/gia-dinh-them-nguoi.png" alt="Thêm người nhà" width="300">
 
 Thêm người thân chỉ cần:
 

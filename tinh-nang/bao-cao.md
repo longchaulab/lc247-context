@@ -13,7 +13,7 @@
 
 ## Tổng quan sức khoẻ
 
-![Báo cáo tổng quan](../screenshot/bao-cao-tong-quan.png)
+<img src="../screenshot/bao-cao-tong-quan.png" alt="Báo cáo tổng quan" width="300">
 
 Mở tab **Báo cáo**, bạn thấy:
 
@@ -25,7 +25,7 @@ Mở tab **Báo cáo**, bạn thấy:
 
 ## Nhật ký đo — Lịch sức khoẻ
 
-![Nhật ký lịch](../screenshot/bao-cao-lich.png)
+<img src="../screenshot/bao-cao-lich.png" alt="Nhật ký lịch" width="300">
 
 Lịch tháng hiển thị trực quan:
 
@@ -40,7 +40,7 @@ Bên dưới lịch là **lời dặn dò từ bác sĩ** — cập nhật theo 
 
 ## Nhật ký đo — Chi tiết từng lần
 
-![Chi tiết lần đo](../screenshot/bao-cao-chi-tiet.png)
+<img src="../screenshot/bao-cao-chi-tiet.png" alt="Chi tiết lần đo" width="300">
 
 Chuyển sang tab **Chi tiết**, bạn xem được:
 
@@ -53,7 +53,7 @@ Chuyển sang tab **Chi tiết**, bạn xem được:
 
 ## Nhật ký tư vấn
 
-![Nhật ký tư vấn](../screenshot/bao-cao-tu-van.png)
+<img src="../screenshot/bao-cao-tu-van.png" alt="Nhật ký tư vấn" width="300">
 
 Xem lại lịch sử **tư vấn với bác sĩ**:
 
@@ -65,7 +65,7 @@ Xem lại lịch sử **tư vấn với bác sĩ**:
 
 ## Báo cáo sức khoẻ hàng tuần
 
-![Hồ sơ cá nhân](../screenshot/ho-so-ca-nhan.png)
+<img src="../screenshot/ho-so-ca-nhan.png" alt="Hồ sơ cá nhân" width="300">
 
 Mỗi tuần, LC247 gửi cho bạn **báo cáo sức khoẻ cá nhân hoá**:
 

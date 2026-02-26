@@ -13,7 +13,7 @@
 
 ## Mở app — LC247 chào bạn
 
-![Trang chủ LC247](../screenshot/home-chao-don.png)
+<img src="../screenshot/home-chao-don.png" alt="Trang chủ LC247" width="300">
 
 Khi mở LC247, bạn sẽ thấy:
 
@@ -26,7 +26,7 @@ Khi mở LC247, bạn sẽ thấy:
 
 ## Xem nhanh sức khoẻ
 
-![Tổng quan sức khoẻ](../screenshot/home-suc-khoe.png)
+<img src="../screenshot/home-suc-khoe.png" alt="Tổng quan sức khoẻ" width="300">
 
 Cuộn xuống, bạn thấy ngay:
 
@@ -39,7 +39,7 @@ Cuộn xuống, bạn thấy ngay:
 
 ## Cài đặt nhắc nhở
 
-![Cài đặt nhắc nhở](../screenshot/nhac-nho-cai-dat.png)
+<img src="../screenshot/nhac-nho-cai-dat.png" alt="Cài đặt nhắc nhở" width="300">
 
 Bạn có thể cài lịch nhắc nhở để không quên đo:
 

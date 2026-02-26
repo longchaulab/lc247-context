@@ -12,7 +12,7 @@
 
 ## Đo xong → Nhận Xu
 
-![Chúc mừng +10 Xu](../screenshot/xu-chuc-mung.png)
+<img src="../screenshot/xu-chuc-mung.png" alt="Chúc mừng +10 Xu" width="300">
 
 Mỗi lần đo huyết áp thành công:
 
@@ -25,7 +25,7 @@ Mỗi lần đo huyết áp thành công:
 
 ## Thử thách 7 ngày
 
-![Thử thách 7 ngày](../screenshot/xu-thu-thach-7-ngay.png)
+<img src="../screenshot/xu-thu-thach-7-ngay.png" alt="Thử thách 7 ngày" width="300">
 
 Đo huyết áp **đủ 7 ngày liên tiếp** để nhận thưởng lớn:
 

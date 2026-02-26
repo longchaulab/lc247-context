@@ -12,7 +12,7 @@
 
 ## Chat 24/7
 
-![Chat hỗ trợ](../screenshot/ho-tro-chat.png)
+<img src="../screenshot/ho-tro-chat.png" alt="Chat hỗ trợ" width="300">
 
 Nhắn tin với **Trung tâm Long Châu 247**:
 

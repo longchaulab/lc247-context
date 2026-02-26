@@ -13,7 +13,7 @@
 
 ## Thư viện nội dung
 
-![Thư viện kiến thức](../screenshot/kien-thuc-thu-vien.png)
+<img src="../screenshot/kien-thuc-thu-vien.png" alt="Thư viện kiến thức" width="300">
 
 Mở tab **Kiến thức**, bạn thấy:
 

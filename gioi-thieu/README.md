@@ -25,17 +25,3 @@ LC247 giúp người bệnh mãn tính **theo dõi sức khoẻ hàng ngày** v�
 - **Bác sĩ thực** — không phải chatbot, bác sĩ Long Châu xem chỉ số và tư vấn trực tiếp
 - **Kết nối hệ sinh thái** — liên thông với 1,700+ nhà thuốc, workshop sức khoẻ, dịch vụ chăm sóc
 
-## Hiện trạng (02/2026)
-
-| Chỉ số | Giá trị |
-|--------|---------|
-| Users đã đăng ký | 4,162 |
-| Tỷ lệ đo HA hàng tuần | 4.9% |
-| Binah face scan success | 84.2% |
-| Onboarding completion | 56% |
-
-## Hướng đi
-
-LC247 đang chuyển từ **công cụ đo** (reactive — chờ user hành động) sang **nền tảng đồng hành** (proactive — app chủ động đến với user đúng lúc, đúng nội dung).
-
-> Xem chi tiết: [Kế hoạch phát triển](../ke-hoach/roadmap.md)

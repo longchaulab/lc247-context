@@ -13,7 +13,7 @@
 
 ## Bước 1: Chọn cách đo
 
-![Chọn phương pháp đo](../screenshot/do-chon-phuong-phap.png)
+<img src="../screenshot/do-chon-phuong-phap.png" alt="Chọn phương pháp đo" width="300">
 
 LC247 có **2 cách đo**:
 
@@ -28,13 +28,13 @@ LC247 có **2 cách đo**:
 
 ### Đo xong → Nhập kết quả
 
-![Hướng dẫn đo bằng máy](../screenshot/do-may-huong-dan.png)
+<img src="../screenshot/do-may-huong-dan.png" alt="Hướng dẫn đo bằng máy" width="300">
 
 Lấy máy đo và tiến hành đo huyết áp. Khi đo xong, bấm **"TÔI ĐÃ ĐO XONG"**.
 
 ### Chụp ảnh hoặc tự nhập
 
-![Chụp ảnh kết quả](../screenshot/do-may-chup-anh.png)
+<img src="../screenshot/do-may-chup-anh.png" alt="Chụp ảnh kết quả" width="300">
 
 Hai lựa chọn:
 - **Chụp ảnh màn hình máy đo** — app tự nhận diện chỉ số
@@ -46,7 +46,7 @@ Hai lựa chọn:
 
 ### Chuẩn bị
 
-![Chuẩn bị face scan](../screenshot/do-face-scan-chuan-bi.png)
+<img src="../screenshot/do-face-scan-chuan-bi.png" alt="Chuẩn bị face scan" width="300">
 
 - Mở camera trước
 - Nghe hướng dẫn bằng giọng nói
@@ -54,7 +54,7 @@ Hai lựa chọn:
 
 ### Đang đo — giữ yên
 
-![Face scan đang đo](../screenshot/do-face-scan-dang-do.png)
+<img src="../screenshot/do-face-scan-dang-do.png" alt="Face scan đang đo" width="300">
 
 - Vòng tròn đếm ngược 40 giây
 - App nhắc: **"Giữ yên nhé Chị, đang đo rồi ạ"**
@@ -62,7 +62,7 @@ Hai lựa chọn:
 
 ### Nhận kết quả
 
-![Kết quả face scan](../screenshot/do-face-scan-ket-qua.png)
+<img src="../screenshot/do-face-scan-ket-qua.png" alt="Kết quả face scan" width="300">
 
 Kết quả hiển thị rõ ràng:
 - **SYS** (Tâm thu): 123 mmHg
@@ -77,7 +77,7 @@ Bấm **"Lưu"** để ghi vào nhật ký sức khoẻ.
 
 ## Bước 2: Nhận kết quả + Lời khuyên bác sĩ
 
-![Kết quả và lời khuyên bác sĩ](../screenshot/ket-qua-bac-si.png)
+<img src="../screenshot/ket-qua-bac-si.png" alt="Kết quả và lời khuyên bác sĩ" width="300">
 
 Sau khi lưu kết quả, bạn nhận được:
 

@@ -4,12 +4,11 @@ Tài liệu sản phẩm LC247 (Long Châu 247) — mini-app quản lý sức kh
 
 ## Cấu trúc
 
-| Section | Nội dung | Đối tượng |
-|---------|---------|----------|
-| [Giới thiệu](gioi-thieu/README.md) | LC247 là gì, hệ sinh thái | Tất cả |
-| [Tính năng](tinh-nang/do-huyet-ap.md) | Mô tả + hướng dẫn sử dụng | Tất cả |
-| [Kế hoạch phát triển](ke-hoach/roadmap.md) | Roadmap, tính năng sắp tới | Nội bộ + Đối tác |
-| [Nội bộ](noi-bo/user-research.md) | Research, data, decisions | Nội bộ |
+| Section | Nội dung |
+|---------|---------|
+| [Giới thiệu](gioi-thieu/README.md) | LC247 là gì, hệ sinh thái Long Châu |
+| [Tính năng](tinh-nang/do-huyet-ap.md) | Mô tả + hướng dẫn sử dụng từng tính năng |
+| [Sắp ra mắt](sap-ra-mat/noi-dung-ca-nhan-hoa.md) | Tính năng đang phát triển |
 
 ## Sử dụng
 

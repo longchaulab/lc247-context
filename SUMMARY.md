@@ -13,16 +13,6 @@
 * [Hỗ trợ & Liên lạc](tinh-nang/ho-tro.md)
 * [Xu & Gamification](tinh-nang/gamification.md)
 
-## Kế hoạch phát triển
-* [Tổng quan Roadmap](ke-hoach/roadmap.md)
-* [Nội dung thông minh](ke-hoach/noi-dung-thong-minh.md)
-* [Đánh giá nguy cơ tim mạch](ke-hoach/who-cvd-risk.md)
-* [Dinh dưỡng](ke-hoach/dinh-duong.md)
-* [Chiến dịch đột quỵ](ke-hoach/dot-quy.md)
-
-## Nội bộ
-* [Product Context tổng hợp](LC247-PRODUCT-CONTEXT.md)
-* [User Research & Insights](noi-bo/user-research.md)
-* [Data & Analytics](noi-bo/data-analytics.md)
-* [Marketing Automation](noi-bo/marketing-automation.md)
-* [Câu hỏi mở & Quyết định](noi-bo/key-decisions.md)
+## Sắp ra mắt
+* [Nội dung cá nhân hoá](sap-ra-mat/noi-dung-ca-nhan-hoa.md)
+* [Đánh giá nguy cơ tim mạch](sap-ra-mat/danh-gia-nguy-co.md)

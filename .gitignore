@@ -1,1 +1,5 @@
 .DS_Store
+_build/output/*
+!_build/output/lc247-product-slide.html
+.vercel
+.claude/

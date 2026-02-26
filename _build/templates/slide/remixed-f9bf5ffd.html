@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LC247 - UI Mockups v2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient-start: #e8f4fc;
+            --bg-gradient-end: #d4ecf9;
+            --bg-white: #ffffff;
+            --primary-blue: #2B7DE9;
+            --primary-blue-light: #4A93ED;
+            --accent-orange: #FF9500;
+            --accent-yellow: #FFCC00;
+            --accent-red: #FF3B30;
+            --accent-green: #34C759;
+            --text-dark: #1a1a2e;
+            --text-secondary: #6B7280;
+            --text-light: #9CA3AF;
+            --card-shadow: 0 4px 20px rgba(43, 125, 233, 0.1);
+            --border-light: #E5E7EB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, var(--bg-gradient-start) 0%, #f0f7fc 100%);
+            color: var(--text-dark);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            color: var(--primary-blue);
+        }
+
+        .header p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+        }
+
+        .section-heading {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 48px;
+            color: var(--text-dark);
+        }
+
+        /* Phone Frame */
+        .phone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 48px;
+            margin-bottom: 100px;
+        }
+
+        .phone-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .phone-label {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .phone-frame {
+            width: 280px;
+            height: 600px;
+            background: #1a1a2e;
+            border-radius: 44px;
+            padding: 10px;
+            box-shadow: 
+                0 25px 80px rgba(0,0,0,0.2),
+                0 10px 30px rgba(0,0,0,0.15),
+                inset 0 0 0 2px rgba(255,255,255,0.1);
+            position: relative;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 30%, #fff 100%);
+            border-radius: 36px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 28px;
+            background: #1a1a2e;
+            border-radius: 0 0 18px 18px;
+            z-index: 10;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .status-bar-icons {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        /* Screen Content Styles */
+        .screen-content {
+            padding: 0 16px 20px;
+            height: calc(100% - 44px);
+            overflow-y: auto;
+        }
+
+        /* Top Bar with Points */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .back-btn {
+            width: 36px;
+            height: 36px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--card-shadow);
+            font-size: 16px;
+        }
+
+        .points-badge {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 2px 8px rgba(255, 165, 0, 0.3);
+        }
+
+        .avatar-small {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FFB6C1, #FFA07A);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        /* Greeting Section */
+        .greeting {
+            margin-bottom: 20px;
+        }
+
+        .greeting h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .greeting p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* User Tabs */
+        .user-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .user-tab {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            background: white;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-light);
+        }
+
+        .user-tab.active {
+            background: var(--primary-blue);
+            color: white;
+            border-color: var(--primary-blue);
+        }
+
+        .user-tab-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Main Action Card */
+        .action-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .action-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .action-card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .streak-badge {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 14px;
+            color: var(--accent-orange);
+        }
+
+        .illustration {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+
+        .action-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            color: white;
+            border: none;
+            border-radius: 14px;
+            padding: 14px 24px;
+            font-size: 16px;
+            font-weight: 700;
+            width: 100%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(43, 125, 233, 0.3);
+        }
+
+        .btn-points {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* Task List */
+        .task-section {
+            background: linear-gradient(135deg, #FFF8E7, #FFF3D6);
+            border-radius: 20px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        .task-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--accent-orange);
+        }
+
+        .task-item {
+            background: white;
+            border-radius: 14px;
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .task-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .task-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .task-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .task-icon.blue {
+            background: #E3F2FD;
+        }
+
+        .task-icon.purple {
+            background: #F3E5F5;
+        }
+
+        .task-icon.green {
+            background: #E8F5E9;
+        }
+
+        .task-info h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        .task-points {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent-orange);
+        }
+
+        .task-btn {
+            background: white;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+            padding: 8px 14px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .see-all {
+            text-align: center;
+            color: var(--primary-blue);
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
+        /* BP Result Screen */
+        .result-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .result-header h1 {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .result-header.normal h1 {
+            color: var(--accent-green);
+        }
+
+        .result-header.warning h1 {
+            color: var(--accent-orange);
+        }
+
+        .result-header.danger h1 {
+            color: var(--accent-red);
+        }
+
+        .result-header .sparkle {
+            color: var(--accent-yellow);
+        }
+
+        .result-message {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .target-bp {
+            font-size: 13px;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        /* BP Display Card */
+        .bp-display {
+            background: white;
+            border-radius: 16px;
+            padding: 16px 20px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 16px;
+        }
+
+        .bp-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .bp-value-group {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+        }
+
+        .bp-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .bp-number {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .heart-rate {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .heart-icon {
+            color: #FF6B9D;
+        }
+
+        /* BP Scale */
+        .bp-scale {
+            height: 8px;
+            background: linear-gradient(90deg, #4CAF50, #8BC34A, #FFEB3B, #FF9800, #F44336);
+            border-radius: 4px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+
+        .bp-indicator {
+            position: absolute;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 8px solid var(--text-dark);
+        }
+
+        .bp-scale-link {
+            font-size: 12px;
+            color: var(--primary-blue);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Doctor Advice Section */
+        .advice-section {
+            margin-bottom: 16px;
+        }
+
+        .advice-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .advice-cards {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+        }
+
+        .advice-card {
+            flex: 0 0 140px;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+
+        .advice-image {
+            height: 90px;
+            background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            position: relative;
+        }
+
+        .advice-bookmark {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            width: 28px;
+            height: 28px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        .advice-content {
+            padding: 12px;
+        }
+
+        .advice-content h4 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.3;
+            margin-bottom: 4px;
+        }
+
+        .advice-content p {
+            font-size: 11px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* Bottom Buttons */
+        .bottom-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: auto;
+            padding-top: 16px;
+        }
+
+        .btn-secondary {
+            flex: 1;
+            background: white;
+            border: 2px solid var(--border-light);
+            color: var(--text-dark);
+            border-radius: 14px;
+            padding: 14px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .btn-primary-small {
+            flex: 1;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            color: white;
+            border: none;
+            border-radius: 14px;
+            padding: 14px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 10px 16px 24px;
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            font-size: 10px;
+            color: var(--text-light);
+        }
+
+        .nav-item.active {
+            color: var(--primary-blue);
+        }
+
+        .nav-icon {
+            font-size: 22px;
+        }
+
+        .nav-call {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-top: -20px;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Knowledge Screen */
+        .knowledge-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 12px;
+        }
+
+        .knowledge-image {
+            height: 100px;
+            background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+
+        .knowledge-content {
+            padding: 14px;
+        }
+
+        .knowledge-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            background: #E3F2FD;
+            padding: 4px 10px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .knowledge-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .knowledge-meta {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* Points Popup Overlay */
+        .points-celebration {
+            background: white;
+            border-radius: 24px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            margin: 40px 16px;
+        }
+
+        .celebration-icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+
+        .celebration-points {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFD700, #FF8C00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .celebration-label {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .celebration-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .celebration-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #FFF8E7, #FFE4B5);
+            padding: 12px 20px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--accent-orange);
+            margin-bottom: 24px;
+        }
+
+        /* Caregiver Dashboard */
+        .family-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .family-header h2 {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .add-btn {
+            width: 36px;
+            height: 36px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .patient-card {
+            background: white;
+            border-radius: 20px;
+            padding: 16px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 12px;
+        }
+
+        .patient-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .patient-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .patient-avatar.green {
+            background: linear-gradient(135deg, #A8E6CF, #88D8B0);
+        }
+
+        .patient-avatar.pink {
+            background: linear-gradient(135deg, #FFB6C1, #FFA07A);
+        }
+
+        .patient-info h4 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .patient-status {
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .patient-status.good {
+            color: var(--accent-green);
+        }
+
+        .patient-status.warning {
+            color: var(--accent-orange);
+        }
+
+        .patient-stats {
+            display: flex;
+            gap: 12px;
+        }
+
+        .patient-stat {
+            flex: 1;
+            background: #F8FAFC;
+            border-radius: 12px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .patient-stat-value {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .patient-stat-value.good {
+            color: var(--accent-green);
+        }
+
+        .patient-stat-value.warning {
+            color: var(--accent-orange);
+        }
+
+        .patient-stat-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        /* Weekly Report */
+        .report-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 16px;
+        }
+
+        .report-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .report-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .report-period {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .stat-box {
+            flex: 1;
+            background: linear-gradient(135deg, #F0F9FF, #E0F2FE);
+            border-radius: 14px;
+            padding: 14px 10px;
+            text-align: center;
+        }
+
+        .stat-box.highlight {
+            background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        .stat-value.green {
+            color: var(--accent-green);
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        /* Chart */
+        .chart-container {
+            margin-bottom: 16px;
+        }
+
+        .chart-bars {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            height: 80px;
+            gap: 6px;
+            padding: 0 4px;
+        }
+
+        .chart-bar-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .chart-bar {
+            width: 100%;
+            background: linear-gradient(180deg, var(--primary-blue), #64B5F6);
+            border-radius: 4px 4px 0 0;
+            min-height: 20px;
+        }
+
+        .chart-bar.warning {
+            background: linear-gradient(180deg, var(--accent-orange), #FFB74D);
+        }
+
+        .chart-label {
+            font-size: 10px;
+            color: var(--text-light);
+            margin-top: 6px;
+        }
+
+        /* Badges Grid */
+        .badges-section {
+            margin-bottom: 16px;
+        }
+
+        .badges-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .badges-title {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .badges-count {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .badge-item {
+            background: white;
+            border-radius: 16px;
+            padding: 14px 8px;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+        }
+
+        .badge-item.locked {
+            opacity: 0.5;
+        }
+
+        .badge-icon {
+            font-size: 32px;
+            margin-bottom: 6px;
+        }
+
+        .badge-name {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            line-height: 1.2;
+        }
+
+        /* Divider */
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+            margin: 80px 0 60px;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        /* Home Indicator */
+        .home-indicator {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 2px;
+        }
+
+        /* Product Tour Tooltip */
+        .tooltip {
+            position: absolute;
+            background: white;
+            padding: 16px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            max-width: 220px;
+            z-index: 100;
+            line-height: 1.4;
+        }
+
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid white;
+        }
+
+        .tooltip-btn {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 16px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-top: 12px;
+            width: 100%;
+        }
+
+        .progress-dots {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 16px;
+        }
+
+        .progress-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 50%;
+        }
+
+        .progress-dot.active {
+            background: var(--primary-blue);
+            width: 24px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>LC247 UI Mockups</h1>
+            <p>Ứng dụng quản lý sức khỏe — Phong cách thân thiện, ấm áp</p>
+        </header>
+
+        <!-- SECTION 1: Home & BP Input -->
+        <section class="section">
+            <p class="section-title">Màn hình chính</p>
+            <h2 class="section-heading">Trang chủ & Đo huyết áp</h2>
+            
+            <div class="phone-grid">
+                <!-- Home Screen -->
+                <div class="phone-wrapper">
+                    <p class="phone-label">Trang chủ — Patient</p>
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="phone-notch"></div>
+                            <div class="status-bar">
+                                <span>9:41</span>
+                                <div class="status-bar-icons">📶 🔋</div>
+                            </div>
+                            <div class="screen-content">
+                                <div class="top-bar">
+                                    <div class="back-btn">🏠</div>
+                                    <div class="points-badge">🪙 200</div>
+                                    <div class="avatar-small">👴</div>
+                                </div>
+                                
+                                <div class="greeting">
+                                    <h2>Chào bác Tài,</h2>
+                                    <p>Chúc bác một ngày tốt lành ☀️</p>
+                                </div>
+                                
+                                <div class="user-tabs">
+                                    <div class="user-tab active">
+                                        <span class="user-tab-avatar">👴</span>
+                                        Tôi
+                                    </div>
+                                    <div class="user-tab">
+                                        + Thêm
+                                    </div>
+                                </div>
+                                
+                                <div class="action-card">
+                                    <div class="action-card-header">
+                                        <span class="action-card-title">Hôm nay cần đo</span>
+                                        <span class="streak-badge">🔥 0</span>
+                                    </div>
+                                    <div class="illustration">🩺</div>
+                                    <p>Đo/Nhập số đo huyết áp để bác sĩ đưa ra tư vấn sức khoẻ cho bác.</p>
+                                    <button class="btn-primary">
+                                        Đo ngay
+                                        <span class="btn-points">+10 🪙</span>
+                                    </button>
+                                </div>
+                                
+                                <div class="task-section">
+                                    <div class="task-header">
+                                        📋 Nhiệm vụ hôm nay
+                                    </div>
+                                    <div class="task-item">
+                                        <div class="task-left">
+                                            <div class="task-icon blue">📊</div>
+                                            <div class="task-info">
+                                                <h4>Xem báo cáo sức khoẻ</h4>
+                                                <span class="task-points">+10 🪙</span>
+                                            </div>
+                                        </div>
+                                        <button class="task-btn">Thực hiện</button>
+                                    </div>
+                                    <div class="task-item">
+                                        <div class="task-left">
+                                            <div class="task-icon purple">💬</div>
+                                            <div class="task-info">
+                                                <h4>Thử nhắn hỏi bác sĩ</h4>
+                                                <span class="task-points">+10 🪙</span>
+                                            </div>
+                                        </div>
+                                        <button class="task-btn">Thực hiện</button>
+                                    </div>
+                                    <div class="see-all">Xem tất cả →</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BP Result - Low -->
+                <div class="phone-wrapper">
+                    <p class="phone-label">Kết quả — Huyết áp thấp</p>
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="phone-notch"></div>
+                            <div class="status-bar">
+                                <span>9:41</span>
+                                <div class="status-bar-icons">📶 🔋</div>
+                            </div>
+                            <div class="screen-content">
+                                <div class="top-bar">
+                                    <div class="back-btn">←</div>
+                                    <div style="display: flex; gap: 12px;">
+                                        <span>🔊</span>
+                                        <span>📅</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="result-header warning">
+                                    <h1>Huyết áp thấp<br>cảnh báo</h1>
+                                    <p class="result-message">Chỉ số hôm nay thấp hơn mức khuyến nghị. Nghỉ ngơi 5 phút và đo lại bác nhé.</p>
+                                    <p class="target-bp">Huyết áp khuyến nghị: 130/60 ℹ️</p>
+                                </div>
+                                
+                                <div class="bp-display">
+                                    <div class="bp-row">
+                                        <div class="bp-value-group">
+                                            <span class="bp-label">Huyết áp</span>
+                                            <span class="bp-number">89/60</span>
+                                        </div>
+                                        <div class="heart-rate">
+                                            <span class="heart-icon">💛</span>
+                                            Tim 70 nhịp/phút
+                                        </div>
+                                    </div>
+                                    <div class="bp-scale">
+                                        <div class="bp-indicator" style="left: 15%;"></div>
+                                    </div>
+                                    <div class="bp-scale-link">Xem mức tăng huyết áp →</div>
+                                </div>
+                                
+                                <div class="advice-section">
+                                    <h3 class="advice-title">Lời khuyên từ bác sĩ</h3>
+                                    <div class="advice-cards">
+                                        <div class="advice-card">
+                                            <div class="advice-image" style="background: linear-gradient(135deg, #E8F5E9, #C8E6C9);">
+                                                🛋️
+                                                <div class="advice-bookmark">🔖</div>
+                                            </div>
+                                            <div class="advice-content">
+                                                <h4>Tạm nghỉ và uống nước</h4>
+                                                <p>Nước chanh muối hoặc bù điện giải, nằm đầu thấp...</p>
+                                            </div>
+                                        </div>
+                                        <div class="advice-card">
+                                            <div class="advice-image" style="background: linear-gradient(135deg, #FFF3E0, #FFE0B2);">
+                                                ⏱️
+                                            </div>
+                                            <div class="advice-content">
+                                                <h4>Đo lại sau 5 phút</h4>
+                                                <p>Ghi nhận để theo dõi...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bottom-buttons">
+                                    <button class="btn-secondary">Xem Báo cáo</button>
+                                    <button class="btn-primary-small">Yêu cầu tư vấn</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BP Result - Normal -->
+                <div class="phone-wrapper">
+                    <p class="phone-label">Kết quả — Bình thường ✓</p>
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="phone-notch"></div>
+                            <div class="status-bar">
+                                <span>9:41</span>
+                                <div class="status-bar-icons">📶 🔋</div>
+                            </div>
+                            <div class="screen-content">
+                                <div class="top-bar">
+                                    <div class="back-btn">←</div>
+                                    <div style="display: flex; gap: 12px;">
+                                        <span>🔊</span>
+                                        <span>📅</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="result-header normal">
+                                    <h1><span class="sparkle">✨</span> Huyết áp<br>Bình thường</h1>
+                                    <p class="result-message">Chỉ số hôm nay ổn 👍 Duy trì đều đặn giúp phát hiện sớm bất thường nhé bác.</p>
+                                    <p class="target-bp">Huyết áp khuyến nghị: 130/60 ℹ️</p>
+                                </div>
+                                
+                                <div class="bp-display">
+                                    <div class="bp-row">
+                                        <div class="bp-value-group">
+                                            <span class="bp-label">Huyết áp</span>
+                                            <span class="bp-number">120/80</span>
+                                        </div>
+                                        <div class="heart-rate">
+                                            <span class="heart-icon">💚</span>
+                                            Tim 70 nhịp/phút
+                                        </div>
+                                    </div>
+                                    <div class="bp-scale">
+                                        <div class="bp-indicator" style="left: 35%;"></div>
+                                    </div>
+                                    <div class="bp-scale-link">Xem mức tăng huyết áp →</div>
+                                </div>
+                                
+                                <div class="advice-section">
+                                    <h3 class="advice-title">Lời khuyên từ bác sĩ</h3>
+                                    <div class="advice-cards">
+                                        <div class="advice-card">
+                                            <div class="advice-image" style="background: linear-gradient(135deg, #E8F5E9, #C8E6C9);">
+                                                🥗
+                                                <div class="advice-bookmark">🔖</div>
+                                            </div>
+                                            <div class="advice-content">
+                                                <h4>Huyết áp ổn định rồi</h4>
+                                                <p>Giữ vững phong độ với lối sống khoa học mỗi ngày</p>
+                                            </div>
+                                        </div>
+                                        <div class="advice-card">
+                                            <div class="advice-image" style="background: linear-gradient(135deg, #FFF8E1, #FFECB3);">
+                                                🍎
+                                            </div>
+                                            <div class="advice-content">
+                                                <h4>Tiếp tục ăn tốt</h4>
+                                                <p>Ăn uống lành mạnh...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bottom-buttons">
+                                    <button class="btn-secondary">Về trang chủ</button>
+                                    <button class="btn-primary-small">Xem Báo cáo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- SECTION 2: Product Tour -->
+        <section class="section">
+            <p class="section-title">Product Tour</p>
+            <h2 class="section-heading">Onboarding Flow</h2>
+            
+            <div class="phone-grid">
+                <!-- Tour Step 1 -->
+                <div class="phone-wrapper">
+                    <p class="phone-label">Tour 1 — Giới thiệu đo HA</p>
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="phone-notch"></div>
+                            <div class="status-bar">
+                                <span>9:41</span>
+                                <div class="status-bar-icons">📶 🔋</div>
+                            </div>
+                            <div class="screen-content" style="position: relative;">
+                                <div class="top-bar" style="opacity: 0.3;">
+                                    <div class="back-btn">🏠</div>
+                                    <div class="points-badge">🪙 0</div>
+                                    <div class="avatar-small">👴</div>
+                                </div>
+                                
+                                <div class="tooltip" style="top: 100px; left: 16px; right: 16px;">
+                                    👋 Chào mừng bác đến với LC247!<br><br>
+                                    Hãy bắt đầu bằng việc đo huyết áp đầu tiên để nhận insight sức khoẻ nhé.
+                                    <button class="tooltip-btn">Bắt đầu →</button>
+                                </div>
+                                
+                                <div class="action-card" style="opacity: 0.3; margin-top: 120px;">
+                                    <div class="illustration">🩺</div>
+                                    <button class="btn-primary">
+                                        Đo ngay
+                                        <span class="btn-points">+10 🪙</span>
+                                    </button>
+                                </div>
+                                
+                                <div class="progress-dots">
+                                    <div class="progress-dot active"></div>
+                                    <div class="progress-dot"></div>
+                                    <div class="progress-dot"></div>
+                                    <div class="progress-dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour Step 2 -->
+                <div class="phone-wrapper">
+                    <p class="phone-label">Tour 2 — Highlight nút đo</p>
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="phone-notch"></div>
+                            <div class="status-bar">
+                                <span>9:41</span>
+                                <div class="status-bar-icons">📶 🔋</div>
+                            </div>
+                            <div class="screen-content" style="position: relative;">
+                                <div class="top-bar" style="opacity: 0.3;">
+                                    <div class="back-btn">🏠</div>
+                                    <div class="points-badge">🪙 0</div>
+                                    <div class="avatar-small">👴</div>
+                                </div>
+                                
+                                <div class="action-card" style="margin-top: 20px;">
+                                    <div class="illustration">🩺</div>
+                                    <p style="opacity: 0.5;">Đo/Nhập số đo huyết áp để bác sĩ đưa ra tư vấn.</p>
+                                    <button class="btn-primary" style="box-shadow: 0 0 0 4px rgba(43,125,233,0.3), 0 4px 15px rgba(43,125,233,0.3);">
+                                        Đo ngay
+                                        <span class="btn-points">+10 🪙</span>
+                                    </button>
+                                </div>
+                                
+                                <div class="tooltip" style="top: 320px; left: 16px; right: 16px;">
+                                    Bấm vào đây để nhập chỉ số huyết áp từ máy đo của bác
+                                    <button class="tooltip-btn">Đo ngay →</button>
+                                </div>
+                                
+                                <div class="progress-dots" style="margin-top: 80px;">
+                                    <div class="progress-dot"></div>
+                                    <div class="progress-dot active"></div>
+                                    <div class="progress-dot"></div>
+                                    <div class="progress-dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour Step 3 - Points -->
+                <div class="phone-wrapper">
+                    <p class="phone-label">Tour 3 — Nhận điểm thưởng</p>
+                    <div class="phone-frame">
+                        <div class="phone-screen" style="background: linear-gradient(180deg, #FFF8E7 0%, #FFF3D6 100%);">
+                            <div class="phone-notch"></div>
+                            <div class="status-bar">
+                                <span>9:41</span>
+                                <div class="status-bar-icons">📶 🔋</div>
+                            </div>
+                            <div class="screen-content">
+                                <div class="points-celebration">
+                                    <div class="celebration-icon">🎉</div>
+                                    <div class="celebration-points">+50</div>
+                                    <div class="celebration-label">Điểm đầu tiên!</div>
+                                    <div class="celebration-desc">Bác đã hoàn thành đo huyết áp lần đầu tiên</div>
+                                    <div class="celebration-badge">
+                                        🏅 Huy hiệu: First BP
+                                    </div>
+                                    <button class="btn-primary">
+                                        Tuyệt vời! Tiếp tục →
+                                    </button>
+                                </div>
+                                
+                                <div class="progress-dots">
+                                    <div class="progress-dot"></div>
+                                    <div class="progress-dot"></div>
+                                    <div class="progress-dot active"></div>
+                                    <div class="progress-dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- SECTION 3: Knowledge & Reports -->
+        <section class="section">
+            <p class="section-title">Features</p>
+            <h2 class="section-heading">Kiến thức & Báo cáo</h2>
+            
+            <div class="phone-grid">
+                <!-- Knowledge Screen -->
+                <div class="phone-wrapper">
+                    <p class="phone-label">Kiến thức — Bite-size</p>
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="phone-notch"></div>
+                            <div class="status-bar">
+                                <span>9:41</span>
+                                <div class="status-bar-icons">📶 🔋</div>
+                            </div>
+                            <div class="screen-content">
+                                <div class="family-header">
+                                    <h2>Kiến thức</h2>
+                                </div>
+                                
+                                <div class="user-tabs" style="margin-bottom: 16px;">
+                                    <div class="user-tab active">Cho bạn</div>
+                                    <div class="user-tab">Huyết áp</div>
+                                    <div class="user-tab">Dinh dưỡng</div>
+                                </div>
+                                
+                                <div class="knowledge-card">
+                                    <div class="knowledge-image">🫀</div>
+                                    <div class="knowledge-content">
+                                        <span class="knowledge-tag">Video • 3 phút</span>
+                                        <h4 class="knowledge-title">5 thói quen giúp ổn định huyết áp mỗi ngày</h4>
+                                        <p class="knowledge-meta">+10 🪙 khi xem xong</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="knowledge-card">
+                                    <div class="knowledge-image" style="background: linear-gradient(135deg, #FFF3E0, #FFE0B2);">🥗</div>
+                                    <div class="knowledge-content">
+                                        <span class="knowledge-tag">Bài viết • 5 phút</span>
+                                        <h4 class="knowledge-title">Thực đơn DASH cho người cao huyết áp</h4>
+                                        <p class="knowledge-meta">+10 🪙 khi đọc xong</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="knowledge-card">
+                                    <div class="knowledge-image" style="background: linear-gradient(135deg, #E8F5E9, #C8E6C9);">🚶</div>
+                                    <div class="knowledge-content">
+                                        <span class="knowledge-tag">Infographic</span>
+                                        <h4 class="knowledge-title">Bài tập nhẹ nhàng cho người lớn tuổi</h4>
+                                        <p class="knowledge-meta">+10 🪙 khi xem xong</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weekly Report -->
+                <div class="phone-wrapper">
+                    <p class="phone-label">Báo cáo tuần</p>
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="phone-notch"></div>
+                            <div class="status-bar">
+                                <span>9:41</span>
+                                <div class="status-bar-icons">📶 🔋</div>
+                            </div>
+                            <div class="screen-content">
+                                <div class="family-header">
+                                    <h2>Tuần của bác</h2>
+                                </div>
+                                <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 16px;">30/12 - 05/01/2026</p>
+                                
+                                <div class="stats-row">
+                                    <div class="stat-box highlight">
+                                        <div class="stat-value green">7</div>
+                                        <div class="stat-label">Ngày đo</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-value">118/78</div>
+                                        <div class="stat-label">Trung bình</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-value green">↓2%</div>
+                                        <div class="stat-label">So tuần trước</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="report-card">
+                                    <div class="report-header">
+                                        <span class="report-title">Huyết áp 7 ngày</span>
+                                    </div>
+                                    <div class="chart-container">
+                                        <div class="chart-bars">
+                                            <div class="chart-bar-wrapper">
+                                                <div class="chart-bar" style="height: 55px;"></div>
+                                                <span class="chart-label">T2</span>
+                                            </div>
+                                            <div class="chart-bar-wrapper">
+                                                <div class="chart-bar" style="height: 60px;"></div>
+                                                <span class="chart-label">T3</span>
+                                            </div>
+                                            <div class="chart-bar-wrapper">
+                                                <div class="chart-bar warning" style="height: 75px;"></div>
+                                                <span class="chart-label">T4</span>
+                                            </div>
+                                            <div class="chart-bar-wrapper">
+                                                <div class="chart-bar" style="height: 58px;"></div>
+                                                <span class="chart-label">T5</span>
+                                            </div>
+                                            <div class="chart-bar-wrapper">
+                                                <div class="chart-bar" style="height: 52px;"></div>
+                                                <span class="chart-label">T6</span>
+                                            </div>
+                                            <div class="chart-bar-wrapper">
+                                                <div class="chart-bar" style="height: 55px;"></div>
+                                                <span class="chart-label">T7</span>
+                                            </div>
+                                            <div class="chart-bar-wrapper">
+                                                <div class="chart-bar" style="height: 50px;"></div>
+                                                <span class="chart-label">CN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="advice-card" style="margin: 0;">
+                                    <div class="advice-image" style="height: 70px; background: linear-gradient(135deg, #E3F2FD, #BBDEFB);">💡</div>
+                                    <div class="advice-content">
+                                        <h4>Gợi ý tuần tới</h4>
+                                        <p>Giảm muối trong bữa ăn để cải thiện chỉ số ngày T4 nhé!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Badges -->
+                <div class="phone-wrapper">
+                    <p class="phone-label">Huy hiệu & Điểm thưởng</p>
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="phone-notch"></div>
+                            <div class="status-bar">
+                                <span>9:41</span>
+                                <div class="status-bar-icons">📶 🔋</div>
+                            </div>
+                            <div class="screen-content">
+                                <div class="family-header">
+                                    <h2>Thành tích</h2>
+                                </div>
+                                
+                                <div class="report-card" style="text-align: center;">
+                                    <div style="font-size: 40px; margin-bottom: 8px;">🪙</div>
+                                    <div style="font-size: 32px; font-weight: 800; color: var(--accent-orange);">575</div>
+                                    <div style="font-size: 14px; color: var(--text-secondary);">điểm tích luỹ</div>
+                                    <div style="margin-top: 12px; padding: 10px; background: #FFF8E7; border-radius: 12px; font-size: 13px; color: var(--text-secondary);">
+                                        Còn 425 điểm để đổi voucher 50K Long Châu 🎁
+                                    </div>
+                                </div>
+                                
+                                <div class="badges-section">
+                                    <div class="badges-header">
+                                        <span class="badges-title">Huy hiệu</span>
+                                        <span class="badges-count">5/9 đã đạt</span>
+                                    </div>
+                                    <div class="badges-grid">
+                                        <div class="badge-item">
+                                            <div class="badge-icon">🎯</div>
+                                            <div class="badge-name">First BP</div>
+                                        </div>
+                                        <div class="badge-item">
+                                            <div class="badge-icon">💡</div>
+                                            <div class="badge-name">Insight Explorer</div>
+                                        </div>
+                                        <div class="badge-item">
+                                            <div class="badge-icon">⏰</div>
+                                            <div class="badge-name">Reminder Set</div>
+                                        </div>
+                                        <div class="badge-item">
+                                            <div class="badge-icon">📚</div>
+                                            <div class="badge-name">Knowledge Seeker</div>
+                                        </div>
+                                        <div class="badge-item">
+                                            <div class="badge-icon">👨‍👩‍👧</div>
+                                            <div class="badge-name">Family Connector</div>
+                                        </div>
+                                        <div class="badge-item locked">
+                                            <div class="badge-icon">👨‍⚕️</div>
+                                            <div class="badge-name">Doctor Connect</div>
+                                        </div>
+                                        <div class="badge-item locked">
+                                            <div class="badge-icon">📊</div>
+                                            <div class="badge-name">Weekly Reviewer</div>
+                                        </div>
+                                        <div class="badge-item locked">
+                                            <div class="badge-icon">🔥</div>
+                                            <div class="badge-name">7-Day Streak</div>
+                                        </div>
+                                        <div class="badge-item locked">
+                                            <div class="badge-icon">🏆</div>
+                                            <div class="badge-name">Health Champion</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- SECTION 4: Caregiver -->
+        <section class="section">
+            <p class="section-title">Caregiver</p>
+            <h2 class="section-heading">Quản lý gia đình</h2>
+            
+            <div class="phone-grid">
+                <!-- Caregiver Dashboard -->
+                <div class="phone-wrapper">
+                    <p class="phone-label">Dashboard — Caregiver</p>
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="phone-notch"></div>
+                            <div class="status-bar">
+                                <span>9:41</span>
+                                <div class="status-bar-icons">📶 🔋</div>
+                            </div>
+                            <div class="screen-content">
+                                <div class="family-header">
+                                    <h2>Gia đình</h2>
+                                    <div class="add-btn">+</div>
+                                </div>
+                                <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 16px;">2 người đang theo dõi</p>
+                                
+                                <div class="patient-card">
+                                    <div class="patient-header">
+                                        <div class="patient-avatar green">👴</div>
+                                        <div>
+                                            <div class="patient-info">
+                                                <h4>Ba</h4>
+                                            </div>
+                                            <div class="patient-status good">● Đã đo hôm nay</div>
+                                        </div>
+                                    </div>
+                                    <div class="patient-stats">
+                                        <div class="patient-stat">
+                                            <div class="patient-stat-value good">118/78</div>
+                                            <div class="patient-stat-label">Huyết áp</div>
+                                        </div>
+                                        <div class="patient-stat">
+                                            <div class="patient-stat-value">🔥 7</div>
+                                            <div class="patient-stat-label">Streak</div>
+                                        </div>
+                                        <div class="patient-stat">
+                                            <div class="patient-stat-value">575</div>
+                                            <div class="patient-stat-label">Điểm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="patient-card">
+                                    <div class="patient-header">
+                                        <div class="patient-avatar pink">👵</div>
+                                        <div>
+                                            <div class="patient-info">
+                                                <h4>Mẹ</h4>
+                                            </div>
+                                            <div class="patient-status warning">● Chưa đo hôm nay</div>
+                                        </div>
+                                    </div>
+                                    <div class="patient-stats">
+                                        <div class="patient-stat">
+                                            <div class="patient-stat-value warning">135/85</div>
+                                            <div class="patient-stat-label">Huyết áp (qua)</div>
+                                        </div>
+                                        <div class="patient-stat">
+                                            <div class="patient-stat-value">🔥 3</div>
+                                            <div class="patient-stat-label">Streak</div>
+                                        </div>
+                                        <div class="patient-stat">
+                                            <div class="patient-stat-value">320</div>
+                                            <div class="patient-stat-label">Điểm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <button class="btn-primary" style="margin-top: 16px;">
+                                    📲 Nhắc mẹ đo huyết áp
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Caregiver Notification -->
+                <div class="phone-wrapper">
+                    <p class="phone-label">Thông báo — Caregiver</p>
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="phone-notch"></div>
+                            <div class="status-bar">
+                                <span>9:41</span>
+                                <div class="status-bar-icons">📶 🔋</div>
+                            </div>
+                            <div class="screen-content">
+                                <div class="family-header">
+                                    <h2>Thông báo</h2>
+                                </div>
+                                
+                                <div class="task-section" style="background: linear-gradient(135deg, #E8F5E9, #C8E6C9);">
+                                    <div class="task-header" style="color: var(--accent-green);">
+                                        ✅ Hôm nay
+                                    </div>
+                                    <div class="task-item">
+                                        <div class="task-left">
+                                            <div class="task-icon green">👴</div>
+                                            <div class="task-info">
+                                                <h4>Ba đã đo huyết áp</h4>
+                                                <span style="font-size: 12px; color: var(--text-secondary);">118/78 - Bình thường ✓</span>
+                                            </div>
+                                        </div>
+                                        <span style="font-size: 12px; color: var(--text-light);">9:30</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="task-section">
+                                    <div class="task-header">
+                                        ⚠️ Cần chú ý
+                                    </div>
+                                    <div class="task-item">
+                                        <div class="task-left">
+                                            <div class="task-icon" style="background: #FFEBEE;">👵</div>
+                                            <div class="task-info">
+                                                <h4>Mẹ chưa đo hôm nay</h4>
+                                                <span style="font-size: 12px; color: var(--text-secondary);">Lần cuối: hôm qua, 135/85</span>
+                                            </div>
+                                        </div>
+                                        <button class="task-btn">Nhắc</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="task-section" style="background: linear-gradient(135deg, #E3F2FD, #BBDEFB);">
+                                    <div class="task-header" style="color: var(--primary-blue);">
+                                        💡 Gợi ý
+                                    </div>
+                                    <div class="task-item">
+                                        <div class="task-left">
+                                            <div class="task-icon blue">📚</div>
+                                            <div class="task-info">
+                                                <h4>Gửi bài viết cho mẹ</h4>
+                                                <span class="task-points">+15 🪙</span>
+                                            </div>
+                                        </div>
+                                        <button class="task-btn">Gửi</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor Chat -->
+                <div class="phone-wrapper">
+                    <p class="phone-label">Tư vấn bác sĩ</p>
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="phone-notch"></div>
+                            <div class="status-bar">
+                                <span>9:41</span>
+                                <div class="status-bar-icons">📶 🔋</div>
+                            </div>
+                            <div class="screen-content">
+                                <div class="top-bar">
+                                    <div class="back-btn">←</div>
+                                    <div style="text-align: center;">
+                                        <div style="font-weight: 700;">BS. Nguyễn Văn A</div>
+                                        <div style="font-size: 12px; color: var(--accent-green);">● Đang online</div>
+                                    </div>
+                                    <span>📞</span>
+                                </div>
+                                
+                                <div style="margin-top: 20px;">
+                                    <div style="background: #F0F9FF; border-radius: 16px; padding: 12px; margin-bottom: 12px; font-size: 13px;">
+                                        <div style="font-weight: 600; margin-bottom: 8px;">📊 Đã gửi báo cáo 5 ngày</div>
+                                        <div style="color: var(--text-secondary);">TB: 118/78 • Cao nhất: 125/82</div>
+                                    </div>
+                                    
+                                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                                        <div style="background: white; border-radius: 16px 16px 16px 4px; padding: 12px; max-width: 85%; font-size: 14px; box-shadow: var(--card-shadow);">
+                                            Chào bác, tôi đã xem qua chỉ số huyết áp 5 ngày qua của bác rồi.
+                                        </div>
+                                        
+                                        <div style="background: white; border-radius: 16px 16px 16px 4px; padding: 12px; max-width: 85%; font-size: 14px; box-shadow: var(--card-shadow);">
+                                            Nhìn chung khá ổn định. Bác có uống thuốc đều không?
+                                        </div>
+                                        
+                                        <div style="background: var(--primary-blue); color: white; border-radius: 16px 16px 4px 16px; padding: 12px; max-width: 85%; margin-left: auto; font-size: 14px;">
+                                            Dạ có ạ, con uống đều mỗi sáng ạ
+                                        </div>
+                                        
+                                        <div style="background: white; border-radius: 16px 16px 16px 4px; padding: 12px; max-width: 85%; font-size: 14px; box-shadow: var(--card-shadow);">
+                                            Tốt lắm! Tiếp tục duy trì nhé bác. Nhớ đo HA mỗi ngày để theo dõi. 👍
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div style="position: absolute; bottom: 16px; left: 16px; right: 16px; display: flex; gap: 8px;">
+                                    <input type="text" placeholder="Nhập tin nhắn..." style="flex: 1; padding: 14px 16px; border: 1px solid var(--border-light); border-radius: 24px; font-size: 14px;">
+                                    <button style="width: 48px; height: 48px; background: var(--primary-blue); border: none; border-radius: 50%; color: white; font-size: 18px;">➤</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

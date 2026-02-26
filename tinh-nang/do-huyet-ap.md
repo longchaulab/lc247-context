@@ -2,16 +2,29 @@
 
 > Đo huyết áp mọi lúc mọi nơi — bằng máy đo hoặc chỉ cần camera điện thoại. Sau mỗi lần đo, bác sĩ gửi lời khuyên riêng cho bạn.
 
-## Đo huyết áp giúp bạn
+## Key Messages
+<!-- Dùng cho: slide, elevator pitch, banner -->
+- **2 cách đo** — bằng máy đo huyết áp hoặc quét khuôn mặt AI chỉ ~40 giây
+- **Bác sĩ thực tư vấn** — sau mỗi lần đo, BS xem chỉ số và gửi lời khuyên cá nhân
+- **Tích Xu mỗi lần** — +10 Xu/lần đo, biến thói quen thành phần thưởng
+
+## Tóm tắt
+<!-- Dùng cho: slide body, PDF summary, social post -->
+LC247 cho phép đo huyết áp bằng 2 cách: nhập kết quả từ máy đo (chụp ảnh hoặc tự nhập) hoặc quét khuôn mặt AI ~40 giây qua camera điện thoại. Mỗi lần đo, bạn nhận kết quả SYS/DIA/nhịp tim, diễn giải dễ hiểu, lời khuyên từ bác sĩ thực, và +10 Xu tích luỹ.
+
+---
+
+## Chi tiết
+<!-- Dùng cho: GitBook, docs đầy đủ -->
+
+### Đo huyết áp giúp bạn
 
 - Biết chỉ số huyết áp chính xác (SYS/DIA/nhịp tim)
 - Nhận diễn giải dễ hiểu — "Bình thường" hay "Cần chú ý"
 - Nhận lời khuyên từ bác sĩ thực sau mỗi lần đo
 - Tích +10 Xu mỗi lần đo để đổi quà
 
----
-
-## Bước 1: Chọn cách đo
+### Bước 1: Chọn cách đo
 
 <img src="../screenshot/do-chon-phuong-phap.png" alt="Chọn phương pháp đo" width="300">
 
@@ -22,17 +35,15 @@ LC247 có **2 cách đo**:
 | **Đo bằng máy** | Bạn có máy đo huyết áp tại nhà |
 | **Đo bằng quét khuôn mặt** | Không có máy đo — chỉ cần camera điện thoại |
 
----
+### Cách 1: Đo bằng máy
 
-## Cách 1: Đo bằng máy
-
-### Đo xong → Nhập kết quả
+#### Đo xong → Nhập kết quả
 
 <img src="../screenshot/do-may-huong-dan.png" alt="Hướng dẫn đo bằng máy" width="300">
 
 Lấy máy đo và tiến hành đo huyết áp. Khi đo xong, bấm **"TÔI ĐÃ ĐO XONG"**.
 
-### Chụp ảnh hoặc tự nhập
+#### Chụp ảnh hoặc tự nhập
 
 <img src="../screenshot/do-may-chup-anh.png" alt="Chụp ảnh kết quả" width="300">
 
@@ -40,11 +51,9 @@ Hai lựa chọn:
 - **Chụp ảnh màn hình máy đo** — app tự nhận diện chỉ số
 - **Tự nhập chỉ số** — nhập SYS/DIA/nhịp tim bằng tay
 
----
+### Cách 2: Đo bằng quét khuôn mặt
 
-## Cách 2: Đo bằng quét khuôn mặt
-
-### Chuẩn bị
+#### Chuẩn bị
 
 <img src="../screenshot/do-face-scan-chuan-bi.png" alt="Chuẩn bị face scan" width="300">
 
@@ -52,7 +61,7 @@ Hai lựa chọn:
 - Nghe hướng dẫn bằng giọng nói
 - Quá trình đo chỉ mất **khoảng 40 giây**
 
-### Đang đo — giữ yên
+#### Đang đo — giữ yên
 
 <img src="../screenshot/do-face-scan-dang-do.png" alt="Face scan đang đo" width="300">
 
@@ -60,7 +69,7 @@ Hai lựa chọn:
 - App nhắc: **"Giữ yên nhé Chị, đang đo rồi ạ"**
 - Nhịp tim hiện dần trên màn hình
 
-### Nhận kết quả
+#### Nhận kết quả
 
 <img src="../screenshot/do-face-scan-ket-qua.png" alt="Kết quả face scan" width="300">
 
@@ -71,11 +80,9 @@ Kết quả hiển thị rõ ràng:
 
 Bấm **"Lưu"** để ghi vào nhật ký sức khoẻ.
 
-> 💡 Kết quả quét khuôn mặt mang tính tham khảo. Để chính xác nhất, nên dùng máy đo huyết áp.
+> Kết quả quét khuôn mặt mang tính tham khảo. Để chính xác nhất, nên dùng máy đo huyết áp.
 
----
-
-## Bước 2: Nhận kết quả + Lời khuyên bác sĩ
+### Bước 2: Nhận kết quả + Lời khuyên bác sĩ
 
 <img src="../screenshot/ket-qua-bac-si.png" alt="Kết quả và lời khuyên bác sĩ" width="300">
 
@@ -88,9 +95,8 @@ Sau khi lưu kết quả, bạn nhận được:
 
 ---
 
-## Kết quả bạn nhận được
-
-Mỗi lần đo huyết áp, bạn nhận:
+## Kết quả người dùng nhận được
+<!-- Dùng cho: slide CTA, landing page -->
 - ✅ Chỉ số SYS/DIA/nhịp tim chính xác
 - ✅ Diễn giải dễ hiểu — bình thường, cần chú ý, hay nguy hiểm
 - ✅ Lời khuyên từ bác sĩ thực (không phải chatbot)

@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/_build/output/lc247-product-slide.html" }
+  ]
+}

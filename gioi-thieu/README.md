@@ -1,13 +1,24 @@
 # LC247 là gì
 
-**Long Châu 247** là tính năng quản lý sức khoẻ mãn tính nằm trong ứng dụng Nhà Thuốc Long Châu (FPT Retail).
+> Mini-app quản lý sức khoẻ mãn tính, đồng hành 24/7 trong hệ sinh thái Nhà Thuốc Long Châu.
 
-- **Không phải app độc lập** — là mini-app kích hoạt bên trong app Long Châu cho khách hàng đã đăng ký
-- **"247" = 24/7** — đồng hành sức khoẻ liên tục, mọi lúc
-- **Đối tượng chính:** Bệnh nhân tăng huyết áp và người thân chăm sóc họ
-- **Phạm vi mở rộng:** Tim mạch, đột quỵ, tiểu đường, dinh dưỡng
+## Key Messages
+<!-- Dùng cho: slide, elevator pitch, banner -->
+- **Đồng hành 24/7** — theo dõi sức khoẻ liên tục, mọi lúc, ngay trong app Long Châu
+- **Đo huyết áp bằng AI** — chỉ cần camera điện thoại, không cần máy đo
+- **Bác sĩ thực tư vấn** — không phải chatbot, bác sĩ Long Châu xem chỉ số và gửi lời khuyên
+- **Cả gia đình cùng dùng** — con cái theo dõi sức khoẻ ba mẹ từ xa
 
-## Sản phẩm làm gì
+## Tóm tắt
+<!-- Dùng cho: slide body, PDF summary, social post -->
+**Long Châu 247** là tính năng quản lý sức khoẻ mãn tính nằm trong ứng dụng Nhà Thuốc Long Châu (FPT Retail). Không phải app độc lập — là mini-app kích hoạt bên trong app Long Châu cho khách hàng đã đăng ký. Đối tượng chính là bệnh nhân tăng huyết áp và người thân chăm sóc họ, với phạm vi mở rộng sang tim mạch, đột quỵ, tiểu đường, dinh dưỡng.
+
+---
+
+## Chi tiết
+<!-- Dùng cho: GitBook, docs đầy đủ -->
+
+### Sản phẩm làm gì
 
 LC247 giúp người bệnh mãn tính **theo dõi sức khoẻ hàng ngày** và **được bác sĩ đồng hành**:
 
@@ -18,10 +29,20 @@ LC247 giúp người bệnh mãn tính **theo dõi sức khoẻ hàng ngày** v�
 5. **Quản lý gia đình** — theo dõi sức khoẻ nhiều người thân trong 1 tài khoản
 6. **Hỗ trợ 24/7** — chat, gọi khẩn cấp, gọi tư vấn bác sĩ
 
-## Điểm khác biệt
+### Điểm khác biệt
 
-- **Quét khuôn mặt đo huyết áp (Binah AI)** — không cần máy đo, chỉ cần camera điện thoại
-- **Vòng tròn gia đình** — con cái theo dõi sức khoẻ ba mẹ từ xa
-- **Bác sĩ thực** — không phải chatbot, bác sĩ Long Châu xem chỉ số và tư vấn trực tiếp
-- **Kết nối hệ sinh thái** — liên thông với 1,700+ nhà thuốc, workshop sức khoẻ, dịch vụ chăm sóc
+| # | Điểm khác biệt | Mô tả |
+|---|----------------|-------|
+| 1 | Quét khuôn mặt đo huyết áp (Binah AI) | Không cần máy đo, chỉ cần camera điện thoại |
+| 2 | Vòng tròn gia đình | Con cái theo dõi sức khoẻ ba mẹ từ xa |
+| 3 | Bác sĩ thực | Không phải chatbot, bác sĩ Long Châu xem chỉ số và tư vấn trực tiếp |
+| 4 | Kết nối hệ sinh thái | Liên thông với 1,700+ nhà thuốc, workshop sức khoẻ, dịch vụ chăm sóc |
 
+---
+
+## Kết quả người dùng nhận được
+<!-- Dùng cho: slide CTA, landing page -->
+- ✅ Đo huyết áp mọi lúc, không cần máy đo
+- ✅ Được bác sĩ thực theo dõi và tư vấn — không phải chatbot
+- ✅ Theo dõi sức khoẻ ba mẹ từ xa, an tâm hơn mỗi ngày
+- ✅ Kết nối trọn vẹn hệ sinh thái 1,700+ nhà thuốc Long Châu

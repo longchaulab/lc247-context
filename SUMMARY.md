@@ -5,13 +5,13 @@
 * [Hệ sinh thái Long Châu](gioi-thieu/he-sinh-thai.md)
 
 ## Tính năng
-* [Trang chủ](tinh-nang/dashboard.md)
-* [Đo huyết áp](tinh-nang/do-huyet-ap.md)
-* [Báo cáo sức khoẻ](tinh-nang/bao-cao.md)
-* [Vòng tròn gia đình](tinh-nang/gia-dinh.md)
-* [Kiến thức sức khoẻ](tinh-nang/kien-thuc.md)
-* [Hỗ trợ & Liên lạc](tinh-nang/ho-tro.md)
-* [Xu & Phần thưởng](tinh-nang/gamification.md)
+1. [Trang chủ](tinh-nang/trang-chu.md)
+2. [Đo huyết áp](tinh-nang/do-huyet-ap.md)
+3. [Báo cáo sức khoẻ](tinh-nang/bao-cao.md)
+4. [Vòng tròn gia đình](tinh-nang/gia-dinh.md)
+5. [Kiến thức sức khoẻ](tinh-nang/kien-thuc.md)
+6. [Hỗ trợ & Liên lạc](tinh-nang/ho-tro.md)
+7. [Xu & Phần thưởng](tinh-nang/gamification.md)
 
 ## Sắp ra mắt
 * [Nội dung cá nhân hoá](sap-ra-mat/noi-dung-ca-nhan-hoa.md)

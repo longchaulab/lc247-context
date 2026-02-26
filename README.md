@@ -46,7 +46,7 @@ Mỗi file markdown trong repo được tổ chức theo **4 lớp**. Mỗi lớ
 
 ### Ví dụ thực tế
 
-Đây là cách file `tinh-nang/do-huyet-ap.md` được tổ chức:
+Đây là cách file `tinh-nang/2-do-huyet-ap.md` được tổ chức:
 
 ```markdown
 ## Key Messages
@@ -88,13 +88,13 @@ gioi-thieu/                         ← Giới thiệu sản phẩm
   └── he-sinh-thai.md                 Hệ sinh thái Long Châu (nhà thuốc, app, workshop, BS)
 
 tinh-nang/                          ← 7 tính năng chính (đánh số theo thứ tự)
-  1. trang-chu.md                     Trang chủ — chào đón, tổng quan sức khoẻ, nhắc nhở
-  2. do-huyet-ap.md                   ★ Đo huyết áp — máy đo + quét khuôn mặt AI (hero feature)
-  3. bao-cao.md                       Báo cáo sức khoẻ — lịch màu, nhật ký, báo cáo tuần
-  4. gia-dinh.md                      Vòng tròn gia đình — theo dõi ba mẹ từ xa
-  5. kien-thuc.md                     Kiến thức sức khoẻ — thư viện bài viết uy tín
-  6. ho-tro.md                        Hỗ trợ & liên lạc — chat 24/7, gọi khẩn cấp
-  7. gamification.md                  Xu & phần thưởng — tích điểm đổi quà
+  ├── 1-trang-chu.md                  Trang chủ — chào đón, tổng quan sức khoẻ, nhắc nhở
+  ├── 2-do-huyet-ap.md                ★ Đo huyết áp — máy đo + quét khuôn mặt AI (hero feature)
+  ├── 3-bao-cao.md                    Báo cáo sức khoẻ — lịch màu, nhật ký, báo cáo tuần
+  ├── 4-gia-dinh.md                   Vòng tròn gia đình — theo dõi ba mẹ từ xa
+  ├── 5-kien-thuc.md                  Kiến thức sức khoẻ — thư viện bài viết uy tín
+  ├── 6-ho-tro.md                     Hỗ trợ & liên lạc — chat 24/7, gọi khẩn cấp
+  └── 7-gamification.md               Xu & phần thưởng — tích điểm đổi quà
 
 sap-ra-mat/                         ← Tính năng đang phát triển
   ├── noi-dung-ca-nhan-hoa.md         Nội dung cá nhân hoá — content theo vai trò, FAST
@@ -242,7 +242,7 @@ Cụ thể cần làm:
 **c) Hoàn thiện các TODO:**
 - Trong các file content có sẵn comment `<!-- TODO: ... -->` đánh dấu chỗ cần bổ sung
 - Tìm tất cả TODO bằng cách search `TODO` trong repo
-- Ví dụ trong `tinh-nang/do-huyet-ap.md`:
+- Ví dụ trong `tinh-nang/2-do-huyet-ap.md`:
   ```
   <!-- TODO: Bổ sung chi tiết sau:
   - Công nghệ rPPG hoạt động thế nào

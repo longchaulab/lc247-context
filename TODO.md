@@ -44,7 +44,17 @@ Lưu ý khi đổi:
 
 ## 🟡 Phase 2: Review & bổ sung chi tiết
 
-### a) Bổ sung nội dung chi tiết từng tính năng
+### a) Bổ sung các luồng còn thiếu
+
+Hiện tại content chỉ mô tả tính năng bên trong app. Còn thiếu các luồng quan trọng:
+
+- ⬜ **Luồng vào app từ bên ngoài**: User đang ở app Nhà Thuốc Long Châu → vào LC247 bằng cách nào? Banner ở đâu, click vào đâu, flow chuyển tiếp ra sao?
+- ⬜ **Onboarding lần đầu**: User mở LC247 lần đầu → phải khai báo những gì? (tên, tuổi, giới tính, tiền sử bệnh, thuốc đang dùng, v.v.) → flow từng bước
+- ⬜ **Luồng dành cho caregiver**: Người thân (con/cháu) dùng app để theo dõi ba mẹ → flow khác gì so với user chính? Quyền gì, thấy gì, làm được gì?
+
+> Cần tạo file mới hoặc bổ sung vào file hiện có (vd: `gioi-thieu/` cho luồng vào app, `tinh-nang/1-trang-chu.md` cho onboarding, `tinh-nang/4-gia-dinh.md` cho caregiver).
+
+### b) Bổ sung nội dung chi tiết từng tính năng (đã có khung)
 
 | # | File | Việc cần làm | Trạng thái |
 |---|------|-------------|-----------|
@@ -56,7 +66,7 @@ Lưu ý khi đổi:
 | 6 | `tinh-nang/6-ho-tro.md` | Chi tiết kênh hỗ trợ, thời gian phản hồi | ⬜ |
 | 7 | `tinh-nang/7-gamification.md` | Bảng quy đổi xu, danh sách phần thưởng | ⬜ |
 
-### b) Bổ sung chi tiết Face Scan AI (hero feature)
+### c) Bổ sung chi tiết Face Scan AI (hero feature)
 
 Trong file `tinh-nang/2-do-huyet-ap.md` có các TODO cần hoàn thiện:
 
@@ -67,19 +77,19 @@ Trong file `tinh-nang/2-do-huyet-ap.md` có các TODO cần hoàn thiện:
 - ⬜ Bảng so sánh Face Scan vs Máy đo (tốc độ, tiện lợi, độ chính xác)
 - ⬜ Use cases phù hợp cho từng phương pháp đo
 
-### c) Ghép video hướng dẫn
+### d) Ghép video hướng dẫn
 
 - ⬜ Tìm/quay video hướng dẫn cho từng tính năng chính
 - ⬜ Ưu tiên: video Face Scan AI (demo trực quan nhất)
 - ⬜ Embed vào file markdown theo format: `> 🎬 **Video:** [Tên](link)`
 
-### d) Thêm screenshot mới (nếu cần)
+### e) Thêm screenshot mới (nếu cần)
 
 - ⬜ Review lại 22 ảnh hiện có — ảnh nào đã cũ / không khớp UI mới?
 - ⬜ Chụp bổ sung nếu app đã cập nhật giao diện
 - ⬜ Đặt tên theo quy tắc: `tên-tính-năng-mô-tả.png`
 
-### e) Kiểm tra thông tin chính xác
+### f) Kiểm tra thông tin chính xác
 
 - ⬜ Tên bác sĩ, chức danh trong app có đúng không?
 - ⬜ Chỉ số huyết áp mẫu có hợp lý không?
@@ -111,3 +121,4 @@ Trong file `tinh-nang/2-do-huyet-ap.md` có các TODO cần hoàn thiện:
 | Ngày | Nội dung |
 |------|---------|
 | 26/02/2026 | Tạo file TODO.md — brainstorm danh sách việc cần làm |
+| 26/02/2026 | Thêm TODO: 3 luồng còn thiếu (vào app từ ngoài, onboarding, caregiver) |

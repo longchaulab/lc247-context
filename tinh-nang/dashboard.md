@@ -1,57 +1,30 @@
 # Trang chủ
 
-> Nơi bắt đầu mỗi ngày — LC247 chào bạn, nhắc bạn đo, và cho bạn thấy tình trạng sức khoẻ ngay lập tức.
-
-## Trang chủ giúp bạn
-
-- Biết ngay hôm nay đã đo huyết áp chưa
-- Xem nhanh chỉ số sức khoẻ mới nhất
-- Chuyển nhanh giữa các thành viên gia đình
-- Đọc kiến thức sức khoẻ phù hợp
-
----
-
-## Mở app — LC247 chào bạn
+> Mở app, thấy ngay sức khoẻ của mình — và bắt đầu hành trình chăm sóc bản thân mỗi ngày.
 
 <img src="../screenshot/home-chao-don.png" alt="Trang chủ LC247" width="300">
 
-Khi mở LC247, bạn sẽ thấy:
-
-- **Lời chào cá nhân** — "Chào Chị C Mai Anh, chúc Chị một ngày tốt lành"
-- **Thành viên gia đình** — Chuyển nhanh giữa hồ sơ của bạn và người thân
-- **Nhắc nhở đo** — "Buổi sáng là thời điểm tốt để Chị đo Huyết Áp đó"
-- **Nút ĐO NGAY** — Bấm để đo huyết áp ngay, tích +10 Xu mỗi lần đo
-
----
-
-## Xem nhanh sức khoẻ
+Khi mở LC247, bạn được **chào đón cá nhân**, nhắc nhở đo huyết áp, và xem nhanh tình trạng sức khoẻ — tất cả trong 1 màn hình.
 
 <img src="../screenshot/home-suc-khoe.png" alt="Tổng quan sức khoẻ" width="300">
 
-Cuộn xuống, bạn thấy ngay:
+---
 
-- **Chỉ số huyết áp mới nhất** — 116/72 mmHg, 73 nhịp/phút
-- **Thanh màu trạng thái** — Xanh = bình thường, Vàng = cần chú ý, Đỏ = cần gặp BS
-- **Lời khuyên từ bác sĩ** — "Giữ vững thể lực và tinh thần nhờ lối sống khoa học"
-- **Kiến thức sức khoẻ** — Bài viết theo 4 chủ đề: Tự chăm sóc, Ăn đúng, Sống khoẻ, Cần biết
+## LC247 có gì cho bạn?
+
+| # | Tính năng | Bạn nhận được |
+|---|-----------|--------------|
+| 1 | [**Đo huyết áp**](do-huyet-ap.md) | Đo bằng máy hoặc quét khuôn mặt — nhận kết quả + lời khuyên bác sĩ |
+| 2 | [**Báo cáo sức khoẻ**](bao-cao.md) | Nhật ký đo, lịch sức khoẻ, báo cáo cá nhân hoá hàng tuần |
+| 3 | [**Vòng tròn gia đình**](gia-dinh.md) | Theo dõi sức khoẻ ba mẹ, ông bà từ xa — nhắn tin nhắc nhở |
+| 4 | [**Kiến thức sức khoẻ**](kien-thuc.md) | Bài viết uy tín về huyết áp, dinh dưỡng, vận động |
+| 5 | [**Hỗ trợ & Liên lạc**](ho-tro.md) | Chat 24/7, gọi khẩn cấp, tư vấn bác sĩ trực tiếp |
+| 6 | [**Xu & Phần thưởng**](gamification.md) | Đo mỗi ngày tích Xu, hoàn thành thử thách đổi quà |
 
 ---
 
-## Cài đặt nhắc nhở
+## Nhắc nhở thông minh
 
 <img src="../screenshot/nhac-nho-cai-dat.png" alt="Cài đặt nhắc nhở" width="300">
 
-Bạn có thể cài lịch nhắc nhở để không quên đo:
-
-- **Đo huyết áp** — Nhắc hàng ngày vào giờ bạn chọn
-- **Đo đường huyết** — Cho người theo dõi đường huyết
-- Bật/tắt bằng 1 nút
-
----
-
-## Kết quả bạn nhận được
-
-Mỗi lần mở app, bạn biết ngay:
-- ✅ Hôm nay đã đo chưa → nếu chưa, bấm 1 nút để đo
-- ✅ Sức khoẻ đang ổn hay cần chú ý → nhìn màu thanh trạng thái
-- ✅ Bác sĩ nói gì → đọc lời khuyên ngay trên trang chủ
+LC247 nhắc bạn đo huyết áp vào đúng giờ mỗi ngày — bật/tắt dễ dàng, không sợ quên.

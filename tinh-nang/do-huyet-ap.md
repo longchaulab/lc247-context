@@ -5,12 +5,13 @@
 ## Key Messages
 <!-- Dùng cho: slide, elevator pitch, banner -->
 - **2 cách đo** — bằng máy đo huyết áp hoặc quét khuôn mặt AI chỉ ~40 giây
+- **★ Đo bằng khuôn mặt AI** — không cần thiết bị, chỉ cần camera, ~40 giây có kết quả
 - **Bác sĩ thực tư vấn** — sau mỗi lần đo, BS xem chỉ số và gửi lời khuyên cá nhân
 - **Tích Xu mỗi lần** — +10 Xu/lần đo, biến thói quen thành phần thưởng
 
 ## Tóm tắt
 <!-- Dùng cho: slide body, PDF summary, social post -->
-LC247 cho phép đo huyết áp bằng 2 cách: nhập kết quả từ máy đo (chụp ảnh hoặc tự nhập) hoặc quét khuôn mặt AI ~40 giây qua camera điện thoại. Mỗi lần đo, bạn nhận kết quả SYS/DIA/nhịp tim, diễn giải dễ hiểu, lời khuyên từ bác sĩ thực, và +10 Xu tích luỹ.
+LC247 cho phép đo huyết áp bằng 2 cách: nhập kết quả từ máy đo (chụp ảnh hoặc tự nhập) hoặc **quét khuôn mặt AI ~40 giây** qua camera điện thoại — không cần thiết bị gì thêm. Mỗi lần đo, bạn nhận kết quả SYS/DIA/nhịp tim, diễn giải dễ hiểu, lời khuyên từ bác sĩ thực, và +10 Xu tích luỹ.
 
 ---
 
@@ -24,7 +25,7 @@ LC247 cho phép đo huyết áp bằng 2 cách: nhập kết quả từ máy đo
 - Nhận lời khuyên từ bác sĩ thực sau mỗi lần đo
 - Tích +10 Xu mỗi lần đo để đổi quà
 
-### Bước 1: Chọn cách đo
+### Chọn cách đo
 
 <img src="../screenshot/do-chon-phuong-phap.png" alt="Chọn phương pháp đo" width="300">
 
@@ -33,7 +34,9 @@ LC247 có **2 cách đo**:
 | Cách đo | Phù hợp khi |
 |---------|------------|
 | **Đo bằng máy** | Bạn có máy đo huyết áp tại nhà |
-| **Đo bằng quét khuôn mặt** | Không có máy đo — chỉ cần camera điện thoại |
+| **★ Đo bằng khuôn mặt AI** | Không có máy đo — chỉ cần camera điện thoại |
+
+---
 
 ### Cách 1: Đo bằng máy
 
@@ -51,7 +54,19 @@ Hai lựa chọn:
 - **Chụp ảnh màn hình máy đo** — app tự nhận diện chỉ số
 - **Tự nhập chỉ số** — nhập SYS/DIA/nhịp tim bằng tay
 
-### Cách 2: Đo bằng quét khuôn mặt
+---
+
+### ★ Cách 2: Đo bằng khuôn mặt AI (Tính năng nổi bật)
+
+<!-- TODO: Bổ sung chi tiết sau:
+- Công nghệ rPPG (Remote Photoplethysmography) hoạt động thế nào
+- Độ chính xác so với máy đo truyền thống (nghiên cứu, số liệu)
+- Điều kiện ánh sáng / môi trường tối ưu
+- Giới hạn và disclaimer y tế
+- Use cases: khi nào nên dùng face scan vs máy đo
+-->
+
+> **Tính năng nổi bật:** Đo huyết áp chỉ bằng camera điện thoại — không cần máy đo, không cần thiết bị ngoài. Công nghệ rPPG phân tích tín hiệu mạch máu qua khuôn mặt.
 
 #### Chuẩn bị
 
@@ -80,13 +95,17 @@ Kết quả hiển thị rõ ràng:
 
 Bấm **"Lưu"** để ghi vào nhật ký sức khoẻ.
 
-> Kết quả quét khuôn mặt mang tính tham khảo. Để chính xác nhất, nên dùng máy đo huyết áp.
+> ⚠️ Kết quả quét khuôn mặt mang tính tham khảo. Để chính xác nhất, nên dùng máy đo huyết áp.
 
-### Bước 2: Nhận kết quả + Lời khuyên bác sĩ
+<!-- TODO: Bổ sung bảng so sánh Face Scan vs Máy đo (độ chính xác, tốc độ, tiện lợi, khuyến nghị dùng khi nào) -->
+
+---
+
+### Nhận kết quả + Lời khuyên bác sĩ
 
 <img src="../screenshot/ket-qua-bac-si.png" alt="Kết quả và lời khuyên bác sĩ" width="300">
 
-Sau khi lưu kết quả, bạn nhận được:
+Sau khi lưu kết quả (dù đo bằng máy hay face scan), bạn nhận được:
 
 - **Trạng thái rõ ràng** — "Huyết áp bình thường" với chữ lớn
 - **Theo dõi tuần** — Các ngày trong tuần bạn đã đo (T2–CN)
@@ -97,6 +116,7 @@ Sau khi lưu kết quả, bạn nhận được:
 
 ## Kết quả người dùng nhận được
 <!-- Dùng cho: slide CTA, landing page -->
+- ✅ Đo huyết áp mọi lúc — bằng máy hoặc chỉ cần camera
 - ✅ Chỉ số SYS/DIA/nhịp tim chính xác
 - ✅ Diễn giải dễ hiểu — bình thường, cần chú ý, hay nguy hiểm
 - ✅ Lời khuyên từ bác sĩ thực (không phải chatbot)

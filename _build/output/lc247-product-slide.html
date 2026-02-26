@@ -156,6 +156,29 @@
             color: var(--accent-orange);
             background: rgba(255, 149, 0, 0.1);
         }
+        .slide-badge.badge-hero {
+            color: white;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            font-size: 12px;
+            padding: 8px 18px;
+        }
+
+        /* ===== LAYOUT HERO: Face Scan highlight ===== */
+        .slide-hero {
+            background: linear-gradient(180deg, #edf5ff 0%, #f8fbff 50%, var(--bg-gradient-end) 100%);
+        }
+        .slide-hero .slide-title {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .slide-hero .phone-frame {
+            box-shadow:
+                0 20px 60px rgba(43, 125, 233, 0.22),
+                0 8px 24px rgba(43, 125, 233, 0.15),
+                inset 0 0 0 1.5px rgba(255,255,255,0.1);
+        }
 
         .slide-title {
             font-size: 36px;
@@ -456,7 +479,7 @@
     <!-- Navigation -->
     <nav class="slide-nav">
         <button class="nav-btn nav-prev" id="prevBtn" aria-label="Previous">&#8592;</button>
-        <div class="slide-counter"><span id="current">1</span> / <span id="total">13</span></div>
+        <div class="slide-counter"><span id="current">1</span> / <span id="total">14</span></div>
         <button class="nav-btn nav-next" id="nextBtn" aria-label="Next">&#8594;</button>
     </nav>
 
@@ -543,17 +566,18 @@
             </div>
         </section>
 
-        <!-- SLIDE 4: Đo huyết áp — Cách đo -->
+        <!-- SLIDE 4: Đo bằng máy -->
         <section class="slide" data-slide="4">
             <div class="slide-content">
                 <div class="slide-left">
                     <span class="slide-badge">Đo huyết áp</span>
-                    <h2 class="slide-title">2 cách đo — máy đo hoặc quét khuôn mặt AI</h2>
+                    <h2 class="slide-title">Đo bằng máy — chụp ảnh là xong</h2>
                     <ul class="key-messages">
-                        <li><strong>Đo bằng máy</strong> — chụp ảnh màn hình máy, app tự nhận diện chỉ số</li>
-                        <li><strong>Quét khuôn mặt AI</strong> — chỉ cần camera, đo trong ~40 giây</li>
-                        <li><strong>+10 Xu mỗi lần</strong> — biến thói quen thành phần thưởng</li>
+                        <li><strong>Chọn "Đo bằng máy"</strong> — dành cho bạn đã có máy đo huyết áp tại nhà</li>
+                        <li><strong>Chụp ảnh màn hình máy</strong> — app tự nhận diện chỉ số SYS/DIA/nhịp tim</li>
+                        <li><strong>Hoặc tự nhập</strong> — nhập chỉ số bằng tay nếu muốn</li>
                     </ul>
+                    <p class="body-text">Đo xong → bấm "Tôi đã đo xong" → chụp ảnh hoặc nhập tay → nhận kết quả + lời khuyên BS.</p>
                 </div>
                 <div class="slide-right">
                     <div class="phone-group">
@@ -564,16 +588,64 @@
                                     <img src="../../screenshot/do-chon-phuong-phap.png" alt="Chọn cách đo" loading="lazy">
                                 </div>
                             </div>
-                            <p class="phone-label">Chọn cách đo</p>
+                            <p class="phone-label">Chọn phương pháp</p>
                         </div>
                         <div class="phone-wrapper">
                             <div class="phone-frame">
                                 <div class="phone-screen">
                                     <div class="phone-notch"></div>
-                                    <img src="../../screenshot/do-face-scan-dang-do.png" alt="AI đang đo" loading="lazy">
+                                    <img src="../../screenshot/do-may-huong-dan.png" alt="Hướng dẫn đo" loading="lazy">
                                 </div>
                             </div>
-                            <p class="phone-label">AI đang đo</p>
+                            <p class="phone-label">Hướng dẫn đo</p>
+                        </div>
+                        <div class="phone-wrapper">
+                            <div class="phone-frame">
+                                <div class="phone-screen">
+                                    <div class="phone-notch"></div>
+                                    <img src="../../screenshot/do-may-chup-anh.png" alt="Chụp ảnh kết quả" loading="lazy">
+                                </div>
+                            </div>
+                            <p class="phone-label">Chụp ảnh kết quả</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: ★ Đo bằng khuôn mặt AI (Hero) -->
+        <section class="slide slide-hero" data-slide="5">
+            <div class="slide-content">
+                <div class="slide-left">
+                    <span class="slide-badge badge-hero">★ Tính năng nổi bật</span>
+                    <h2 class="slide-title">Đo huyết áp bằng khuôn mặt AI</h2>
+                    <ul class="key-messages">
+                        <li><strong>Không cần máy đo</strong> — chỉ cần camera trước điện thoại</li>
+                        <li><strong>~40 giây</strong> — mở camera, giữ yên, nhận kết quả</li>
+                        <li><strong>Hướng dẫn bằng giọng nói</strong> — app nhắc từng bước, ai cũng làm được</li>
+                    </ul>
+                    <p class="body-text">Công nghệ rPPG phân tích tín hiệu mạch máu qua camera — đo mọi lúc mọi nơi, không cần thiết bị.</p>
+                    <!-- TODO: Bổ sung chi tiết về công nghệ rPPG, độ chính xác, so sánh với máy đo -->
+                </div>
+                <div class="slide-right">
+                    <div class="phone-group">
+                        <div class="phone-wrapper">
+                            <div class="phone-frame">
+                                <div class="phone-screen">
+                                    <div class="phone-notch"></div>
+                                    <img src="../../screenshot/do-face-scan-chuan-bi.png" alt="Chuẩn bị" loading="lazy">
+                                </div>
+                            </div>
+                            <p class="phone-label">Chuẩn bị</p>
+                        </div>
+                        <div class="phone-wrapper">
+                            <div class="phone-frame">
+                                <div class="phone-screen">
+                                    <div class="phone-notch"></div>
+                                    <img src="../../screenshot/do-face-scan-dang-do.png" alt="Đang đo ~40s" loading="lazy">
+                                </div>
+                            </div>
+                            <p class="phone-label">Đang đo ~40s</p>
                         </div>
                         <div class="phone-wrapper">
                             <div class="phone-frame">
@@ -589,54 +661,46 @@
             </div>
         </section>
 
-        <!-- SLIDE 5: Đo huyết áp — Kết quả + BS -->
-        <section class="slide" data-slide="5">
+        <!-- SLIDE 6: Kết quả + Bác sĩ tư vấn -->
+        <section class="slide" data-slide="6">
             <div class="slide-content">
-                <div class="slide-left">
-                    <span class="slide-badge">Đo huyết áp</span>
+                <div class="slide-left-wide">
+                    <span class="slide-badge">Kết quả & Bác sĩ</span>
                     <h2 class="slide-title">Bác sĩ thực tư vấn sau mỗi lần đo</h2>
                     <ul class="key-messages">
-                        <li><strong>Chụp ảnh máy đo</strong> — app nhận diện chỉ số tự động</li>
                         <li><strong>Diễn giải dễ hiểu</strong> — "Bình thường", "Cần chú ý", hay "Nguy hiểm"</li>
-                        <li><strong>Lời khuyên cá nhân</strong> — bác sĩ Long Châu gửi khuyến nghị riêng cho bạn</li>
+                        <li><strong>Lời khuyên cá nhân</strong> — bác sĩ Long Châu xem chỉ số và gửi khuyến nghị riêng</li>
+                        <li><strong>+10 Xu mỗi lần</strong> — tích luỹ đổi quà, biến thói quen thành niềm vui</li>
                     </ul>
+                    <p class="body-text">Không phải chatbot — bác sĩ thực của Long Châu review chỉ số và phản hồi.</p>
                 </div>
                 <div class="slide-right">
-                    <div class="phone-group">
+                    <div class="phone-group phone-group-2">
                         <div class="phone-wrapper">
-                            <div class="phone-frame">
+                            <div class="phone-frame phone-frame-lg">
                                 <div class="phone-screen">
                                     <div class="phone-notch"></div>
-                                    <img src="../../screenshot/do-may-huong-dan.png" alt="Hướng dẫn đo" loading="lazy">
+                                    <img src="../../screenshot/ket-qua-bac-si.png" alt="Lời khuyên bác sĩ" loading="lazy">
                                 </div>
                             </div>
-                            <p class="phone-label">Hướng dẫn</p>
+                            <p class="phone-label">Kết quả + Lời khuyên BS</p>
                         </div>
                         <div class="phone-wrapper">
-                            <div class="phone-frame">
+                            <div class="phone-frame phone-frame-lg">
                                 <div class="phone-screen">
                                     <div class="phone-notch"></div>
-                                    <img src="../../screenshot/do-may-chup-anh.png" alt="Chụp ảnh" loading="lazy">
+                                    <img src="../../screenshot/do-may-camera.png" alt="Camera nhận diện" loading="lazy">
                                 </div>
                             </div>
-                            <p class="phone-label">Chụp ảnh kết quả</p>
-                        </div>
-                        <div class="phone-wrapper">
-                            <div class="phone-frame">
-                                <div class="phone-screen">
-                                    <div class="phone-notch"></div>
-                                    <img src="../../screenshot/ket-qua-bac-si.png" alt="Lời khuyên BS" loading="lazy">
-                                </div>
-                            </div>
-                            <p class="phone-label">Lời khuyên BS</p>
+                            <p class="phone-label">Camera nhận diện chỉ số</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SLIDE 6: Báo cáo -->
-        <section class="slide" data-slide="6">
+        <!-- SLIDE 7: Báo cáo -->
+        <section class="slide" data-slide="7">
             <div class="slide-content">
                 <div class="slide-left">
                     <span class="slide-badge">Báo cáo sức khoẻ</span>
@@ -681,8 +745,8 @@
             </div>
         </section>
 
-        <!-- SLIDE 7: Gia đình -->
-        <section class="slide" data-slide="7">
+        <!-- SLIDE 8: Gia đình -->
+        <section class="slide" data-slide="8">
             <div class="slide-content">
                 <div class="slide-left-wide">
                     <span class="slide-badge">Vòng tròn gia đình</span>
@@ -719,8 +783,8 @@
             </div>
         </section>
 
-        <!-- SLIDE 8: Kiến thức + Hỗ trợ -->
-        <section class="slide" data-slide="8">
+        <!-- SLIDE 9: Kiến thức + Hỗ trợ -->
+        <section class="slide" data-slide="9">
             <div class="slide-content">
                 <div class="slide-left-wide">
                     <span class="slide-badge">Kiến thức & Hỗ trợ</span>
@@ -757,8 +821,8 @@
             </div>
         </section>
 
-        <!-- SLIDE 9: Xu & Phần thưởng -->
-        <section class="slide" data-slide="9">
+        <!-- SLIDE 10: Xu & Phần thưởng -->
+        <section class="slide" data-slide="10">
             <div class="slide-content">
                 <div class="slide-left-wide">
                     <span class="slide-badge">Xu & Phần thưởng</span>
@@ -794,8 +858,8 @@
             </div>
         </section>
 
-        <!-- SLIDE 10: Cá nhân hoá (Sắp ra mắt) -->
-        <section class="slide" data-slide="10">
+        <!-- SLIDE 11: Cá nhân hoá (Sắp ra mắt) -->
+        <section class="slide" data-slide="11">
             <div class="slide-centered">
                 <span class="slide-badge coming-soon">Sắp ra mắt</span>
                 <h2 class="slide-title">Nội dung cá nhân hoá</h2>
@@ -831,8 +895,8 @@
             </div>
         </section>
 
-        <!-- SLIDE 11: Đánh giá nguy cơ (Sắp ra mắt) -->
-        <section class="slide" data-slide="11">
+        <!-- SLIDE 12: Đánh giá nguy cơ (Sắp ra mắt) -->
+        <section class="slide" data-slide="12">
             <div class="slide-centered">
                 <span class="slide-badge coming-soon">Sắp ra mắt</span>
                 <h2 class="slide-title">Đánh giá nguy cơ tim mạch</h2>
@@ -868,8 +932,8 @@
             </div>
         </section>
 
-        <!-- SLIDE 12: Tổng hợp giá trị -->
-        <section class="slide" data-slide="12">
+        <!-- SLIDE 13: Tổng hợp giá trị -->
+        <section class="slide" data-slide="13">
             <div class="slide-centered">
                 <span class="slide-badge">Tổng hợp</span>
                 <h2 class="slide-title">Giá trị bạn nhận được</h2>
@@ -886,8 +950,8 @@
             </div>
         </section>
 
-        <!-- SLIDE 13: Closing -->
-        <section class="slide slide-cover" data-slide="13">
+        <!-- SLIDE 14: Closing -->
+        <section class="slide slide-cover" data-slide="14">
             <div class="cover-logo">FPT Retail &bull; Nhà Thuốc Long Châu</div>
             <h1 class="cover-title">Long Châu 247</h1>
             <p class="cover-subtitle">Đồng hành sức khoẻ — mọi lúc, mọi nơi</p>

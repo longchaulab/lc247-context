@@ -21,4 +21,5 @@ templates/
 
 | Template | File | Mô tả |
 |----------|------|-------|
-| UI Mockup Slide | `slide/remixed-f9bf5ffd.html` | HTML slide với phone frames, design system LC247 |
+| **Product Slide** | `slide-product/template.html` | Template slide giới thiệu sản phẩm mobile app — 5 layout, phone frames, animations. Xem `slide-product/README.md` để biết chi tiết design system |
+| UI Mockup (ref) | `slide/remixed-f9bf5ffd.html` | File HTML gốc ban đầu, chỉ để tham khảo design |

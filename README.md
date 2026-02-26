@@ -140,6 +140,7 @@ _build/                             ← Thư mục tooling (GitBook tự bỏ qu
 
 ```
 README.md           ← Bạn đang đọc file này
+TODO.md             ← Danh sách việc cần làm (xem Roadmap)
 SUMMARY.md          ← Mục lục cho GitBook (danh sách tất cả trang content)
 vercel.json         ← Cấu hình deploy Vercel (trỏ "/" → slide HTML)
 .gitignore          ← File Git bỏ qua
@@ -213,58 +214,14 @@ Nếu muốn đọc nhanh mà không cần mở GitHub:
 
 ## Roadmap — Việc cần làm
 
-### Phase 1: Xây khung content (Source of Truth) — DONE
+> Chi tiết đầy đủ xem tại **[TODO.md](TODO.md)** — file track tất cả việc cần làm.
 
-Đã hoàn thành:
-- 11 file markdown mô tả đầy đủ sản phẩm (2 giới thiệu + 7 tính năng + 2 sắp ra mắt)
-- 22 screenshots từ app thật
-- Tổ chức theo bộ khung 4 lớp (Key Messages / Tóm tắt / Chi tiết / Kết quả)
-- Slide web v1 — 14 slide, deploy tại https://lc247-demo.vercel.app
-
-### Phase 2: Review & bổ sung chi tiết — TO DO
-
-> **Đây là việc tiếp theo dành cho bạn.** Khung đã có, giờ cần đi sâu vào từng tính năng để bổ sung chi tiết.
-
-Cụ thể cần làm:
-
-**a) Đọc lại từng file, bổ sung mô tả chi tiết hơn:**
-- Mô tả rõ hơn journey/luồng sử dụng (user mở app → làm gì → nhận kết quả gì)
-- Bổ sung các edge case, lưu ý, tips mà user cần biết
-- Kiểm tra thông tin đã chính xác chưa (tên bác sĩ, chỉ số mẫu, v.v.)
-
-**b) Ghép video hướng dẫn vào từng bước:**
-- Tìm/quay video hướng dẫn phù hợp cho từng tính năng
-- Thêm vào file markdown ở vị trí phù hợp, dùng format:
-  ```markdown
-  > 🎬 **Video hướng dẫn:** [Tên video](link-youtube-hoac-drive)
-  ```
-
-**c) Hoàn thiện các TODO:**
-- Trong các file content có sẵn comment `<!-- TODO: ... -->` đánh dấu chỗ cần bổ sung
-- Tìm tất cả TODO bằng cách search `TODO` trong repo
-- Ví dụ trong `tinh-nang/2-do-huyet-ap.md`:
-  ```
-  <!-- TODO: Bổ sung chi tiết sau:
-  - Công nghệ rPPG hoạt động thế nào
-  - Độ chính xác so với máy đo truyền thống
-  - Điều kiện ánh sáng / môi trường tối ưu
-  -->
-  ```
-
-**d) Thêm screenshot mới (nếu cần):**
-- Chụp ảnh từ app, lưu vào thư mục `screenshot/`
-- Đặt tên theo quy tắc: `tên-tính-năng-mô-tả.png` (viết thường, dùng dấu gạch ngang)
-- Trong file markdown, chèn ảnh:
-  ```markdown
-  <img src="../screenshot/ten-anh.png" alt="Mô tả ảnh" width="300">
-  ```
-
-### Phase 3: Tạo output formats — TO DO
-
-Sau khi Phase 2 hoàn thiện:
-- Cập nhật slide web (hiện là v1, cần update nội dung theo bổ sung ở Phase 2)
-- Xuất slide PDF
-- Các format khác nếu cần
+| Phase | Trạng thái | Mô tả |
+|-------|-----------|-------|
+| **Phase 1** | ✅ Done | Xây khung content — 11 file markdown, 22 screenshots, slide web v1 |
+| **🔴 Đổi tên** | ⬜ To Do | Sản phẩm đổi tên thành **"Bác Sĩ Long Châu 247"** — cần đổi ~59 chỗ trong 14 file |
+| **Phase 2** | ⬜ To Do | Review & bổ sung chi tiết — journey, video, Face Scan AI, screenshot |
+| **Phase 3** | ⬜ To Do | Tạo output formats — cập nhật slide, xuất PDF |
 
 ---
 

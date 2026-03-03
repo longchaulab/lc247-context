@@ -1,5 +1,6 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/_build/output/lc247-product-slide.html" }
+    { "source": "/", "destination": "/_build/output/lc247-product-slide.html" },
+    { "source": "/onboarding", "destination": "/huong-dan/onboarding-slide.html" }
   ]
 }

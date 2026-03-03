@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LC247 — Hướng dẫn Onboarding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #2563EB;
+            --primary-blue-light: #3B82F6;
+            --primary-blue-dark: #1D4ED8;
+            --accent-orange: #F97316;
+            --accent-green: #22C55E;
+            --text-dark: #1E293B;
+            --text-secondary: #64748B;
+            --text-light: #94A3B8;
+            --bg-start: #EFF6FF;
+            --bg-end: #F8FAFC;
+            --card-bg: rgba(255,255,255,0.8);
+            --card-shadow: 0 4px 24px rgba(37, 99, 235, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            color: var(--text-dark);
+        }
+
+        /* ===== SLIDE FRAMEWORK ===== */
+        .slides-wrapper {
+            display: flex;
+            height: 100vh;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            flex-shrink: 0;
+            padding: 50px 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(160deg, var(--bg-start) 0%, var(--bg-end) 100%);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slide-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .slide-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .slide-image {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-image img {
+            max-height: 70vh;
+            width: auto;
+            border-radius: 28px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        /* ===== COVER SLIDE ===== */
+        .slide-cover {
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 50%, #60A5FA 100%);
+            color: white;
+        }
+
+        .slide-cover .slide-content {
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(8px);
+            padding: 8px 24px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .cover-title {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .cover-subtitle {
+            font-size: 22px;
+            font-weight: 400;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        /* ===== END SLIDE ===== */
+        .slide-end {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 50%, #60A5FA 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .slide-end .slide-content {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        .step-badge {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 5px 16px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .step-badge.green { background: var(--accent-green); }
+        .step-badge.orange { background: var(--accent-orange); }
+
+        .slide-title {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+
+        .slide-title .highlight {
+            color: var(--primary-blue);
+        }
+
+        .slide-title .highlight-orange {
+            color: var(--accent-orange);
+        }
+
+        .slide-desc {
+            font-size: 17px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        /* ===== STEP LIST ===== */
+        .step-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .step-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .step-num {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 700;
+            margin-top: 2px;
+        }
+
+        /* ===== INFO CARDS ===== */
+        .info-cards {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            flex: 1;
+            background: var(--card-bg);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            border-radius: 14px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .info-card-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .info-card-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .info-card-value {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        /* ===== MODE COMPARE ===== */
+        .mode-compare {
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .mode-box {
+            flex: 1;
+            background: var(--card-bg);
+            border: 2px solid rgba(37, 99, 235, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+
+        .mode-box.active {
+            border-color: var(--primary-blue);
+            background: rgba(37, 99, 235, 0.04);
+        }
+
+        .mode-box-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .mode-box-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ===== TIP BOX ===== */
+        .tip-box {
+            background: linear-gradient(135deg, #FFF7ED, #FFFBF5);
+            border: 1px solid #FED7AA;
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-top: 16px;
+            font-size: 14px;
+            color: #9A3412;
+            line-height: 1.6;
+        }
+
+        .tip-box strong {
+            color: var(--accent-orange);
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-light));
+            transition: width 0.4s ease;
+            border-radius: 0 2px 2px 0;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .slide-nav {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(16px);
+            padding: 8px 20px;
+            border-radius: 40px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            width: 38px;
+            height: 38px;
+            border: none;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .nav-btn:hover { background: var(--primary-blue-dark); transform: scale(1.08); }
+        .nav-btn:disabled { background: #CBD5E1; cursor: not-allowed; transform: none; }
+
+        .nav-counter {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            min-width: 60px;
+            text-align: center;
+        }
+
+        /* ===== KEYBOARD HINT ===== */
+        .keyboard-hint {
+            position: fixed;
+            top: 16px;
+            right: 20px;
+            font-size: 12px;
+            color: var(--text-light);
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(8px);
+            padding: 6px 14px;
+            border-radius: 20px;
+            z-index: 1000;
+        }
+
+        .slide-cover .keyboard-hint,
+        .slide-end .keyboard-hint { color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.15); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .slide { padding: 30px 24px; }
+            .slide-content { flex-direction: column; gap: 24px; }
+            .slide-image img { max-height: 40vh; }
+            .slide-title { font-size: 26px; }
+            .cover-title { font-size: 36px; }
+            .mode-compare { flex-direction: column; }
+            .info-cards { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+<div class="keyboard-hint">Dùng phím ← → hoặc click để chuyển slide</div>
+
+<div class="slides-wrapper" id="slidesWrapper">
+
+    <!-- ===== SLIDE 0: COVER ===== -->
+    <div class="slide slide-cover">
+        <div class="slide-content">
+            <div class="cover-badge">Hướng dẫn sử dụng</div>
+            <div class="cover-title">Onboarding<br>Long Châu 247</div>
+            <div class="cover-subtitle">Hướng dẫn thiết lập tài khoản cho người dùng mới — từ đăng ký đến vào trang chủ, chỉ trong 2 phút.</div>
+            <div style="margin-top: 20px; font-size: 14px; opacity: 0.6;">Nhấn → để bắt đầu</div>
+        </div>
+    </div>
+
+    <!-- ===== SLIDE 0.1: Tải app Long Châu ===== -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <div class="step-badge orange">Chuẩn bị</div>
+                <div class="slide-title">Tải app <span class="highlight">Long Châu — Chuyên gia thuốc</span></div>
+                <div class="slide-desc">
+                    LC247 là mini-app nằm bên trong app Nhà Thuốc Long Châu. Bước đầu tiên: tải app chính từ App Store hoặc Google Play.
+                </div>
+                <ul class="step-list">
+                    <li><span class="step-num">1</span><span>Mở <strong>App Store</strong> (iPhone) hoặc <strong>CH Play</strong> (Android)</span></li>
+                    <li><span class="step-num">2</span><span>Tìm kiếm: <strong>"Long Châu"</strong> hoặc <strong>"Nhà Thuốc Long Châu"</strong></span></li>
+                    <li><span class="step-num">3</span><span>Chọn app <strong>"Long Châu - Chuyên gia thuốc"</strong> (icon xanh dương, có logo Long Châu)</span></li>
+                    <li><span class="step-num">4</span><span>Nhấn <strong>"Cài đặt"</strong> (hoặc "Mở" nếu đã cài) → chờ tải xong</span></li>
+                </ul>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-card-icon">⭐</div>
+                        <div class="info-card-label">Đánh giá</div>
+                        <div class="info-card-value">4.6 / 5 sao</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">📱</div>
+                        <div class="info-card-label">Danh mục</div>
+                        <div class="info-card-value">Y Tế • #1 BXH</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">💰</div>
+                        <div class="info-card-label">Giá</div>
+                        <div class="info-card-value">Miễn phí</div>
+                    </div>
+                </div>
+                <div class="tip-box">
+                    <strong>Tip nhân viên:</strong> Nếu khách chưa có app, giúp họ tải ngay tại quầy. Tìm "Long Châu" trên store → chọn app có icon chính thức → nhấn Cài đặt. Chỉ mất ~30 giây.
+                </div>
+            </div>
+            <div class="slide-image">
+                <img src="../Onboarding/0.1.jpg" alt="Tải app Long Châu trên App Store">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SLIDE 0.2: Mở LC247 từ trang chủ ===== -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <div class="step-badge orange">Chuẩn bị</div>
+                <div class="slide-title">Mở <span class="highlight">Long Châu 247</span> từ trang chủ</div>
+                <div class="slide-desc">
+                    Sau khi mở app Long Châu, tìm icon "Long Châu 247" trên trang chủ để vào mini-app quản lý sức khỏe.
+                </div>
+                <ul class="step-list">
+                    <li><span class="step-num">1</span><span>Mở app <strong>Long Châu</strong> → đăng nhập bằng SĐT (nếu chưa đăng nhập)</span></li>
+                    <li><span class="step-num">2</span><span>Tại <strong>trang chủ</strong>, tìm hàng icon tính năng bên dưới banner</span></li>
+                    <li><span class="step-num">3</span><span>Nhấn icon <strong>"Long Châu 247"</strong> (logo hình khiên xanh có số 247)</span></li>
+                    <li><span class="step-num">4</span><span>LC247 mở ra → bắt đầu <strong>Onboarding</strong> (nếu lần đầu)</span></li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Tip nhân viên:</strong> Icon LC247 nằm cùng hàng với "Tìm nhà thuốc", "Nhắc uống thuốc", "Kiểm tra sức khỏe", "AR Camera". Vuốt sang phải nếu chưa thấy. Chỉ rõ cho khách vị trí icon này.
+                </div>
+            </div>
+            <div class="slide-image">
+                <img src="../Onboarding/0.2.jpg" alt="Trang chủ Long Châu - Icon LC247">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SLIDE 1: Giới thiệu & Đăng ký ===== -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <div class="step-badge">Bước 1</div>
+                <div class="slide-title">Màn hình <span class="highlight">giới thiệu</span></div>
+                <div class="slide-desc">
+                    Khi mở LC247 lần đầu, bạn thấy màn hình chào mừng giới thiệu 3 giá trị cốt lõi của app.
+                </div>
+                <ul class="step-list">
+                    <li><span class="step-num">1</span><span>Bác sĩ khám chuẩn xác hơn khi có đầy đủ chỉ số lưu trữ</span></li>
+                    <li><span class="step-num">2</span><span>Có chuyên gia tư vấn y tế riêng, mọi lúc mọi nơi</span></li>
+                    <li><span class="step-num">3</span><span>Người thân kết nối và theo dõi chỉ số sức khỏe từ xa</span></li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Tip nhân viên:</strong> Giới thiệu 3 giá trị này cho khách trước khi nhấn "Đăng ký ngay" — giúp khách hiểu lý do nên dùng app.
+                </div>
+            </div>
+            <div class="slide-image">
+                <img src="../Onboarding/1.png" alt="Màn hình giới thiệu">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SLIDE 2: Gói sử dụng ===== -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <div class="step-badge">Bước 2</div>
+                <div class="slide-title">Chọn <span class="highlight">gói sử dụng</span></div>
+                <div class="slide-desc">
+                    App hiển thị gói "Tiên phong" — gói miễn phí với đầy đủ đặc quyền chăm sóc sức khỏe.
+                </div>
+                <ul class="step-list">
+                    <li><span class="step-num">&#10003;</span><span>Được bác sĩ tư vấn định kỳ</span></li>
+                    <li><span class="step-num">&#10003;</span><span>Cảnh báo sớm & kết nối bác sĩ khi bất thường</span></li>
+                    <li><span class="step-num">&#10003;</span><span>Nhận đánh giá & lời khuyên khi nhập chỉ số</span></li>
+                    <li><span class="step-num">&#10003;</span><span>Xem và gửi lịch sử sức khỏe cho bác sĩ</span></li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Tip nhân viên:</strong> Nhấn mạnh "MIỄN PHÍ" — nhiều khách ngại vì tưởng phải trả phí. Nhấn nút "Trải nghiệm miễn phí ngay" để tiếp tục.
+                </div>
+            </div>
+            <div class="slide-image">
+                <img src="../Onboarding/2.png" alt="Gói sử dụng">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SLIDE 3: Thông tin cơ bản ===== -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <div class="step-badge">Bước 3</div>
+                <div class="slide-title">Nhập <span class="highlight">thông tin cơ bản</span></div>
+                <div class="slide-desc">
+                    Thanh tiến trình 4 bước hiện ở trên cùng. Bước đầu tiên: nhập tên, xưng hô và giới tính.
+                </div>
+                <ul class="step-list">
+                    <li><span class="step-num">1</span><span><strong>Họ và tên</strong> — để app gọi tên bạn (ví dụ: "Chào Chị Linh")</span></li>
+                    <li><span class="step-num">2</span><span><strong>Xưng hô</strong> — chọn: Anh, Chú, Ông, Bác, Bạn, Bà, Chị, Cô</span></li>
+                    <li><span class="step-num">3</span><span><strong>Giới tính</strong> — Nam hoặc Nữ (dùng cho hồ sơ y tế)</span></li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Tip nhân viên:</strong> Với khách lớn tuổi, nhân viên có thể nhập giúp. Xưng hô quyết định cách app giao tiếp suốt quá trình sử dụng.
+                </div>
+            </div>
+            <div class="slide-image">
+                <img src="../Onboarding/3.jpg" alt="Thông tin cơ bản">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SLIDE 4: Ngày sinh ===== -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <div class="step-badge">Bước 4</div>
+                <div class="slide-title">Chọn <span class="highlight">ngày sinh</span></div>
+                <div class="slide-desc">
+                    Cuộn lên hoặc xuống để chọn ngày, tháng, năm sinh. Thông tin này giúp app đánh giá chỉ số sức khỏe phù hợp theo độ tuổi.
+                </div>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-card-icon">📅</div>
+                        <div class="info-card-label">Thao tác</div>
+                        <div class="info-card-value">Cuộn chọn ngày/tháng/năm</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">🎯</div>
+                        <div class="info-card-label">Mục đích</div>
+                        <div class="info-card-value">Đánh giá HA theo tuổi</div>
+                    </div>
+                </div>
+                <div class="tip-box">
+                    <strong>Tip nhân viên:</strong> Hướng dẫn khách lớn tuổi cách cuộn — vuốt lên/xuống trên cột ngày, tháng, năm. Sau khi chọn xong nhấn "Tiếp tục".
+                </div>
+            </div>
+            <div class="slide-image">
+                <img src="../Onboarding/4.jpg" alt="Chọn ngày sinh">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SLIDE 5: Chiều cao & Cân nặng ===== -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <div class="step-badge">Bước 5</div>
+                <div class="slide-title">Nhập <span class="highlight">chiều cao</span> & <span class="highlight">cân nặng</span></div>
+                <div class="slide-desc">
+                    Cuộn chọn chiều cao (cm) và cân nặng (kg). Đây là dữ liệu cá nhân nhạy cảm, được bảo mật theo quy định Luật bảo vệ dữ liệu cá nhân.
+                </div>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-card-icon">📏</div>
+                        <div class="info-card-label">Chiều cao</div>
+                        <div class="info-card-value">Đơn vị: cm</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">⚖️</div>
+                        <div class="info-card-label">Cân nặng</div>
+                        <div class="info-card-value">Đơn vị: kg</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">🔒</div>
+                        <div class="info-card-label">Bảo mật</div>
+                        <div class="info-card-value">Dữ liệu mã hóa</div>
+                    </div>
+                </div>
+                <div class="tip-box">
+                    <strong>Tip nhân viên:</strong> Nếu khách không nhớ chính xác, ước lượng cũng được — có thể sửa sau trong Hồ sơ cá nhân.
+                </div>
+            </div>
+            <div class="slide-image">
+                <img src="../Onboarding/5.jpg" alt="Chiều cao & Cân nặng">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SLIDE 6: Tiền sử bệnh ===== -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <div class="step-badge">Bước 6</div>
+                <div class="slide-title">Khai báo <span class="highlight">tiền sử bệnh</span></div>
+                <div class="slide-desc">
+                    Chọn các bệnh lý đang có. App dùng thông tin này để cá nhân hóa tư vấn và cảnh báo phù hợp.
+                </div>
+                <ul class="step-list">
+                    <li><span class="step-num" style="background: #EF4444;">&#9829;</span><span><strong>Tim mạch - Huyết áp</strong></span></li>
+                    <li><span class="step-num" style="background: #EF4444;">&#9679;</span><span><strong>Đái tháo đường</strong></span></li>
+                    <li><span class="step-num" style="background: #94A3B8;">&#9675;</span><span>Phổi tắc nghẽn mãn tính, Rối loạn lipid máu, Gan - Thận, Tâm thần kinh, Cơ xương khớp...</span></li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Tip nhân viên:</strong> Có thể nhấn "Bỏ qua" nếu khách không muốn khai — nhưng khuyên nên chọn để bác sĩ tư vấn chính xác hơn. Có thể chọn nhiều bệnh lý.
+                </div>
+            </div>
+            <div class="slide-image">
+                <img src="../Onboarding/6.jpg" alt="Tiền sử bệnh">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SLIDE 7: Dị ứng ===== -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <div class="step-badge">Bước 7</div>
+                <div class="slide-title">Khai báo <span class="highlight">dị ứng</span></div>
+                <div class="slide-desc">
+                    App hỏi về các loại dị ứng để bác sĩ lưu ý khi tư vấn thuốc và chế độ ăn uống.
+                </div>
+                <ul class="step-list">
+                    <li><span class="step-num">🦐</span><span><strong>Thực phẩm</strong> — nhập chi tiết dị ứng thực phẩm nào</span></li>
+                    <li><span class="step-num">💊</span><span><strong>Thuốc</strong> — dị ứng với loại thuốc gì</span></li>
+                    <li><span class="step-num">🌧️</span><span><strong>Thời tiết</strong></span></li>
+                    <li><span class="step-num">🧪</span><span><strong>Côn trùng và hóa chất</strong></span></li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Tip nhân viên:</strong> Bước này cũng có nút "Bỏ qua". Nhưng nếu khách dị ứng thuốc, nên khai để bác sĩ biết tránh gợi ý thuốc gây dị ứng.
+                </div>
+            </div>
+            <div class="slide-image">
+                <img src="../Onboarding/7.jpg" alt="Dị ứng">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SLIDE 8: Chọn mode Bản thân ===== -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <div class="step-badge green">Bước 8</div>
+                <div class="slide-title">Chọn <span class="highlight">mục đích sử dụng</span></div>
+                <div class="slide-desc">
+                    Bước cuối cùng trong onboarding — chọn "Dùng cho" ai.
+                </div>
+                <div class="mode-compare">
+                    <div class="mode-box active">
+                        <div class="mode-box-title">👤 Bản thân</div>
+                        <div class="mode-box-desc">Trực tiếp theo dõi sức khỏe bản thân toàn diện. Trang chủ hiển thị chỉ số và nút "Đo ngay" của bạn.</div>
+                    </div>
+                    <div class="mode-box">
+                        <div class="mode-box-title">👨‍👩‍👧 Người nhà</div>
+                        <div class="mode-box-desc">Dõi theo sức khỏe người nhà, kịp thời khi có bất thường. Trang chủ hiển thị danh sách người thân.</div>
+                    </div>
+                </div>
+                <div class="tip-box" style="margin-top: 16px;">
+                    <strong>Tip nhân viên:</strong> Hỏi khách: "Anh/Chị muốn theo dõi cho mình hay cho ba mẹ?" để chọn mode phù hợp. Dù chọn mode nào, vẫn dùng được tất cả tính năng.
+                </div>
+            </div>
+            <div class="slide-image">
+                <img src="../Onboarding/8.jpg" alt="Mode Bản thân">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SLIDE 9: Mode Người nhà (preview) ===== -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <div class="step-badge green">Bước 8 (tiếp)</div>
+                <div class="slide-title">Mode <span class="highlight-orange">Người nhà</span></div>
+                <div class="slide-desc">
+                    Nếu chọn "Người nhà", app hiển thị preview giao diện theo dõi gia đình — thấy chỉ số của ba/mẹ/người thân ngay trên trang chủ.
+                </div>
+                <ul class="step-list">
+                    <li><span class="step-num">1</span><span>Tab "Cả nhà" hiển thị mặc định</span></li>
+                    <li><span class="step-num">2</span><span>Thấy tên + chỉ số từng người thân (Ba Tài, Mẹ...)</span></li>
+                    <li><span class="step-num">3</span><span>Nhận tin nhắn thoại từ bác sĩ về sức khỏe người thân</span></li>
+                    <li><span class="step-num">4</span><span>Lời dặn cá nhân: "Nhắc ba duy trì đều đặn..."</span></li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Tip nhân viên:</strong> Cho khách xem preview này — giúp họ hình dung "sau khi liên kết, mình sẽ thấy gì" trên app.
+                </div>
+            </div>
+            <div class="slide-image">
+                <img src="../Onboarding/9.jpg" alt="Mode Người nhà">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SLIDE 10: Hoàn tất ===== -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <div class="step-badge orange">Hoàn tất</div>
+                <div class="slide-title">Chào mừng đến với<br><span class="highlight">Long Châu 247</span></div>
+                <div class="slide-desc">
+                    Hồ sơ sức khỏe đã sẵn sàng! App hiển thị màn hình chào mừng với logo 247 và lời mời bắt đầu hành trình chăm sóc sức khỏe.
+                </div>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-card-icon">✅</div>
+                        <div class="info-card-label">Hồ sơ</div>
+                        <div class="info-card-value">Đã sẵn sàng</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">🎯</div>
+                        <div class="info-card-label">Bước tiếp theo</div>
+                        <div class="info-card-value">Nhập chỉ số đầu tiên</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">🎁</div>
+                        <div class="info-card-label">Nhận ngay</div>
+                        <div class="info-card-value">+10 xu khi đo lần đầu</div>
+                    </div>
+                </div>
+                <div class="tip-box">
+                    <strong>Tip nhân viên:</strong> Nhấn "Bắt đầu ngay" → app vào trang chủ. Hướng dẫn khách nhấn "Đo ngay" để trải nghiệm tính năng cốt lõi ngay lập tức!
+                </div>
+            </div>
+            <div class="slide-image">
+                <img src="../Onboarding/10.jpg" alt="Hoàn tất onboarding">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SLIDE 11: Trang chủ ===== -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <div class="step-badge green">Trang chủ</div>
+                <div class="slide-title">Vào <span class="highlight">trang chủ</span> LC247</div>
+                <div class="slide-desc">
+                    Đây là giao diện chính sau khi onboarding. App hiển thị tour hướng dẫn nhanh (1/5 bước) giúp khách làm quen.
+                </div>
+                <ul class="step-list">
+                    <li><span class="step-num">1</span><span><strong>Lời chào cá nhân</strong> — "Chào Chị Linh, Chúc Chị một ngày tốt lành"</span></li>
+                    <li><span class="step-num">2</span><span><strong>Tabs gia đình</strong> — Tôi, Test Uat Sáu, Em gái Linh...</span></li>
+                    <li><span class="step-num">3</span><span><strong>Nút "ĐO NGAY +10 xu"</strong> — hành động chính</span></li>
+                    <li><span class="step-num">4</span><span><strong>Menu dưới:</strong> Trang chủ, Báo cáo, Gọi khẩn cấp, Kiến thức, Hỏi bác sĩ</span></li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Tip nhân viên:</strong> Khuyên khách nhấn "Tiếp theo" để xem hết tour 5 bước. Sau đó nhấn "ĐO NGAY" để đo huyết áp lần đầu tiên!
+                </div>
+            </div>
+            <div class="slide-image">
+                <img src="../Onboarding/11.jpg" alt="Trang chủ LC247">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SLIDE END ===== -->
+    <div class="slide slide-end">
+        <div class="slide-content">
+            <div class="cover-badge">Onboarding hoàn tất</div>
+            <div class="cover-title" style="font-size: 44px;">Tóm tắt toàn bộ</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 900px; margin-top: 8px;">
+                <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); border-radius: 12px; padding: 14px 20px; text-align: left; min-width: 170px; flex: 1;">
+                    <div style="font-size: 13px; opacity: 0.7;">Chuẩn bị</div>
+                    <div style="font-weight: 700; font-size: 15px;">Tải app & Mở LC247</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); border-radius: 12px; padding: 14px 20px; text-align: left; min-width: 170px; flex: 1;">
+                    <div style="font-size: 13px; opacity: 0.7;">Bước 1-2</div>
+                    <div style="font-weight: 700; font-size: 15px;">Giới thiệu & Gói sử dụng</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); border-radius: 12px; padding: 14px 20px; text-align: left; min-width: 170px; flex: 1;">
+                    <div style="font-size: 13px; opacity: 0.7;">Bước 3-5</div>
+                    <div style="font-weight: 700; font-size: 15px;">Thông tin cá nhân</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); border-radius: 12px; padding: 14px 20px; text-align: left; min-width: 170px; flex: 1;">
+                    <div style="font-size: 13px; opacity: 0.7;">Bước 6-7</div>
+                    <div style="font-weight: 700; font-size: 15px;">Tiền sử bệnh & Dị ứng</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); border-radius: 12px; padding: 14px 20px; text-align: left; min-width: 170px; flex: 1;">
+                    <div style="font-size: 13px; opacity: 0.7;">Bước 8</div>
+                    <div style="font-weight: 700; font-size: 15px;">Chọn mode & Bắt đầu</div>
+                </div>
+            </div>
+            <div class="cover-subtitle" style="margin-top: 16px; font-size: 18px;">
+                Tổng thời gian: ~2 phút<br>
+                Tiếp theo: Đo huyết áp lần đầu tiên!
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Navigation -->
+<div class="slide-nav">
+    <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">&#8592;</button>
+    <span class="nav-counter" id="navCounter">1 / 13</span>
+    <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">&#8594;</button>
+</div>
+
+<script>
+    let current = 0;
+    const wrapper = document.getElementById('slidesWrapper');
+    const slides = wrapper.children;
+    const total = slides.length;
+
+    function goTo(n) {
+        current = Math.max(0, Math.min(n, total - 1));
+        wrapper.style.transform = `translateX(-${current * 100}vw)`;
+        document.getElementById('progressFill').style.width = `${((current + 1) / total) * 100}%`;
+        document.getElementById('navCounter').textContent = `${current + 1} / ${total}`;
+        document.getElementById('prevBtn').disabled = current === 0;
+        document.getElementById('nextBtn').disabled = current === total - 1;
+    }
+
+    function changeSlide(dir) { goTo(current + dir); }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); changeSlide(1); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); changeSlide(-1); }
+        if (e.key === 'f' || e.key === 'F') {
+            if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+            else document.exitFullscreen();
+        }
+    });
+
+    // Click navigation (left/right halves)
+    document.addEventListener('click', e => {
+        if (e.target.closest('.slide-nav') || e.target.closest('a') || e.target.closest('button')) return;
+        if (e.clientX > window.innerWidth / 2) changeSlide(1);
+        else changeSlide(-1);
+    });
+
+    // Touch swipe
+    let touchStartX = 0;
+    document.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; });
+    document.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 50) changeSlide(diff > 0 ? 1 : -1);
+    });
+
+    goTo(0);
+</script>
+
+</body>
+</html>
